@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import style from './App.css'
 
 export default function App() {
     return (
