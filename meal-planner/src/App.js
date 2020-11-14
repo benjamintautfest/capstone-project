@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
+    <StyledDiv className="App">
      <h1>Hello world!</h1>
-    </div>
+    </StyledDiv>
   );
 }
 
-export default App;
+const StyledDiv = styled.div`
+font-family: sans-serif;
+text-align: center;
+color: yellowgreen;
+`
