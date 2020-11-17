@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 html {
@@ -8,22 +9,20 @@ html {
 }
 
 body {
+    margin: 0 auto;
     display: grid;
-    grid-template-rows: 85px auto 48px;
     max-width: 600px;
-    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     font-size: 112.5%;
-    margin: 0;
+    background: papayawhip;
 }
 
 h1 {
     color: #fc6f03;
     line-height: 2;
-    font-weight: 300;
 }
 
 h2 {
