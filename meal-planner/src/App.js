@@ -8,10 +8,23 @@ import MealSelect from './MealSelect'
 import style from './App.css'
 
 export default function App() {
-    const [mealMenu, setMealmenu] = useState(false)
+    const weekdays = [
+        'Montag',
+        'Dienstag',
+        'Mittwoch',
+        'Donnerstag',
+        'Freitag',
+        'Samstag',
+        'Sonntag',
+    ]
+
+    const [isWeekday, setIsWeekday] = useState()
+    const [mealMenu, setMealMenu] = useState(false)
 
     function handleClick(event) {
-        mealMenu ? setMealmenu(false) : setMealmenu(true)
+        const currentDay = event.currentTarget.id
+        console.log(event.currentTarget.id)
+        setIsWeekday(event.currentTarget.id)
     }
 
     return (
@@ -20,19 +33,17 @@ export default function App() {
                 <img src={logo} alt="" />
             </header>
             <section className="content">
-                <Button
-                    onClick={handleClick}
-                    day={'Montag'}
-                    meal={'Spargel-Pasta'}
-                    id="mo"
-                />
-                {mealMenu ? <MealSelect></MealSelect> : ''}
-                <Button id="di" day={'Dienstag'} meal={'Gemüselasagne'} />
-                <Button day={'Mittwoch'} meal={'Avocado-Risotto'} />
-                <Button day={'Donnerstag'} meal={'Ofengemüse mit Pesto'} />
-                <Button day={'Freitag'} meal={'Spargel-Pasta'} />
-                <Button day={'Samstag'} meal={'Spargel-Pasta'} />
-                <Button day={'Montag'} meal={'Spargel-Pasta'} />
+                {weekdays.map((weekday) => (
+                    <div>
+                        <Button
+                            day={weekday}
+                            id={weekday}
+                            meal={'please choose'}
+                            onClick={handleClick}
+                        />
+                        {isWeekday === weekday && <MealSelect />}
+                    </div>
+                ))}
             </section>
             <footer></footer>
         </StyledDiv>

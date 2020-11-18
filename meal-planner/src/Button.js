@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import slate from './assets/slate.jpg'
 
-export default function Button({ day, meal, onClick }) {
+export default function Button({ day, meal, onClick, id }) {
     return (
-        <ButtonStyled onClick={onClick}>
+        <ButtonStyled id={id} onClick={onClick}>
             <span className={'day'}>{day}</span>{' '}
             <span className={'meal'}>{meal}</span>
         </ButtonStyled>

@@ -1,23 +1,22 @@
 import styled from 'styled-components'
 
-export default function MealSelect() {
+export default function MealSelect({ key }) {
     const meals = [
+        'Kartoffelsalat',
         'Gemüselasagne',
         'Mayo',
         'Currywurst',
         'Linsensuppe',
         'Frikassee',
         'Currywurst',
+        'Katzenfutter',
     ]
 
     return (
         <ListStyled>
-            <li>Gemüselasagne</li>
-            <li>Mayo</li>
-            <li>Currywurst</li>
-            <li>Linsensuppe</li>
-            <li>Frikassee</li>
-            <li>Currywurst</li>
+            {meals.map((meal) => (
+                <li index={key}>{meal}</li>
+            ))}
         </ListStyled>
     )
 }
