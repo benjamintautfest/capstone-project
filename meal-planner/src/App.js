@@ -2,8 +2,8 @@ import { useState } from 'react'
 import styled from 'styled-components/macro'
 import woodBackground from './assets/wood_background.jpg'
 import logo from './assets/logo.png'
-import Button from './Button'
-import MealSelect from './MealSelect'
+import Button from './components/Button'
+import MealSelect from './components/MealSelect'
 
 export default function App() {
     const weekdays = [
@@ -27,7 +27,7 @@ export default function App() {
             <header>
                 <img src={logo} alt="" />
             </header>
-            <section className="content">
+            <section>
                 {weekdays.map((weekday, index) => (
                     <div>
                         <Button
@@ -55,17 +55,20 @@ const StyledDiv = styled.div`
     background-size: cover;
     height: 100vh;
 
+    header {
+        box-shadow: 0 5px 5px #ee000000;
+    }
+
     h1 {
         color: white;
     }
 
     img {
-        width: 50%;
-        margin: 0 auto;
-        margin-top: 30px;
+        width: 60%;
+        margin-top: 40px;
     }
 
-    .content {
+    section {
         overflow: auto;
     }
 
