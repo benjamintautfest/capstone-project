@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export default function MealSelect({ key }) {
+export default function MealSelect({ key, onClick }) {
     const meals = [
         'Kartoffelsalat',
         'Gemüselasagne',
@@ -15,7 +15,9 @@ export default function MealSelect({ key }) {
     return (
         <ListStyled>
             {meals.map((meal) => (
-                <li index={key}>{meal}</li>
+                <li index={key} onClick={onClick}>
+                    {meal}
+                </li>
             ))}
         </ListStyled>
     )

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import woodBackground from './assets/wood_background.jpg'
 import logo from './assets/logo.png'
 import Button from './Button'
@@ -38,7 +38,7 @@ export default function App() {
                         <Button
                             day={weekday}
                             id={weekday}
-                            meal={'please choose'}
+                            meal={'Auswahl'}
                             onClick={handleClick}
                         />
                         {isWeekday === weekday && <MealSelect />}
