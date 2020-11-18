@@ -5,8 +5,6 @@ import logo from './assets/logo.png'
 import Button from './Button'
 import MealSelect from './MealSelect'
 
-import style from './App.css'
-
 export default function App() {
     const weekdays = [
         'Montag',
@@ -19,11 +17,8 @@ export default function App() {
     ]
 
     const [isWeekday, setIsWeekday] = useState()
-    const [mealMenu, setMealMenu] = useState(false)
 
     function handleClick(event) {
-        const currentDay = event.currentTarget.id
-        console.log(event.currentTarget.id)
         setIsWeekday(event.currentTarget.id)
     }
 
@@ -33,13 +28,14 @@ export default function App() {
                 <img src={logo} alt="" />
             </header>
             <section className="content">
-                {weekdays.map((weekday) => (
+                {weekdays.map((weekday, index) => (
                     <div>
                         <Button
                             day={weekday}
                             id={weekday}
                             meal={'Auswahl'}
                             onClick={handleClick}
+                            key={index}
                         />
                         {isWeekday === weekday && <MealSelect />}
                     </div>

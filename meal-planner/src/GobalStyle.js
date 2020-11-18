@@ -1,16 +1,15 @@
-import { createGlobalStyle } from 'styled-components/macro'
+import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
 
 * {
     box-sizing: border-box;
-    margin: 0;
 }
 
 html {
-    height: 100%;
-    font-family: sans-serif;
-}
+   height: 100%;    
+   font-family: sans-serif;
+} 
 
 body {
     margin: 0 auto;
@@ -22,6 +21,7 @@ body {
     height: 100%;
     font-size: 112.5%;
     background: papayawhip;
+    margin: 0;
 }
 
 h1 {

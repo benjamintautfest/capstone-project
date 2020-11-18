@@ -14,8 +14,8 @@ export default function MealSelect({ key, onClick }) {
 
     return (
         <ListStyled>
-            {meals.map((meal) => (
-                <li index={key} onClick={onClick}>
+            {meals.map((meal, index) => (
+                <li key={index} onClick={onClick}>
                     {meal}
                 </li>
             ))}
