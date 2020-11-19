@@ -1,26 +1,27 @@
 import styled from 'styled-components'
+import { v4 as uuidv4 } from 'uuid'
 
-export default function MealSelect({ key, onClick }) {
+export default function MealSelect({
+    key,
+    onClick,
+    weekdayId,
+    handleMealClick,
+}) {
     const meals = [
-        'Käsestulle',
-        'Kartoffelsalat',
-        'Gemüselasagne',
-        'Mayo',
-        'Currywurst',
-        'Linsensuppe',
-        'Frikassee',
-        'Currywurst',
-        'Katzenfutter',
+        { meal: 'Käsestulle', id: uuidv4() },
+        { meal: 'Kartoffelsalat', id: uuidv4() },
+        { meal: 'Gemüselasagne', id: uuidv4() },
+        { meal: 'Steinpilzrisotto', id: uuidv4() },
+        { meal: 'Currywurst', id: uuidv4() },
+        { meal: 'Linsensuppe', id: uuidv4() },
+        { meal: 'Tofufrikassee', id: uuidv4() },
+        { meal: 'Banana Pancakes', id: uuidv4() },
     ]
-
-    function onMealClick(meal) {
-        console.log(meal)
-    }
 
     return (
         <ListStyled>
-            {meals.map((meal, index) => (
-                <li key={index} onClick={() => onMealClick(meal)}>
+            {meals.map(({ meal, id }) => (
+                <li key={id} onClick={() => handleMealClick(meal, weekdayId)}>
                     {meal}
                 </li>
             ))}
@@ -39,11 +40,10 @@ const ListStyled = styled.ul`
         background: maroon;
         margin: 5px;
         color: ivory;
-        justify-content: center;
-        align-items: center;
+        place-items: center;
         padding: 0 30px;
         font-size: 0.8em;
         border-radius: 5px;
-        width: 800px;
+        line-height: 1.4em;
     }
 `
