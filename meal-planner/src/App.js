@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 import woodBackground from './assets/wood_background.jpg'
 import logo from './assets/logo.svg'
 import Button from './components/Button'
-import MealSelect from './components/MealSelect'
+import MealSelectMenu from './components/MealSelectMenu'
 import { v4 as uuidv4 } from 'uuid'
 
 export default function App() {
@@ -47,7 +47,7 @@ export default function App() {
                             key={id}
                         />
                         {selectedWeekday === weekday && (
-                            <MealSelect
+                            <MealSelectMenu
                                 handleMealClick={selectMeal}
                                 weekdayId={id}
                             />
