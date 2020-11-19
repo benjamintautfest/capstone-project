@@ -11,6 +11,7 @@ export default function MealSelect({ weekdayId, handleMealClick }) {
         { meal: 'Linsensuppe', id: uuidv4() },
         { meal: 'Tofufrikassee', id: uuidv4() },
         { meal: 'Banana Pancakes', id: uuidv4() },
+        { meal: 'Thai Gemüsecurry', id: uuidv4() },
     ]
 
     return (
