@@ -63,7 +63,7 @@ export default function App() {
 
 const AppStyled = styled.div`
     display: grid;
-    grid-template-rows: 180px auto 60px;
+    grid-template-rows: 180px auto 48px;
     font-family: sans-serif;
     text-align: center;
     background: url(${woodBackground});
@@ -80,7 +80,7 @@ const AppStyled = styled.div`
     }
 
     img {
-        width: 45%;
+        width: 170px;
         margin-top: 30px;
         margin-right: 30px;
     }
