@@ -38,13 +38,12 @@ export default function App() {
             </header>
             <section>
                 {weekdays.map(({ weekday, id, meal }) => (
-                    <div>
+                    <div key={id}>
                         <Button
                             day={weekday}
                             id={weekday}
                             meal={meal}
                             onClick={handleClick}
-                            key={id}
                         />
                         {selectedWeekday === weekday && (
                             <MealSelectMenu

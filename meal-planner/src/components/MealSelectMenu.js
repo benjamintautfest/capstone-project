@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { v4 as uuidv4 } from 'uuid'
 
-export default function MealSelect({ weekdayId, handleMealClick }) {
+export default function MealSelectMenu({ weekdayId, handleMealClick }) {
     const meals = [
         { meal: 'Käsestulle', id: uuidv4() },
         { meal: 'Kartoffelsalat', id: uuidv4() },

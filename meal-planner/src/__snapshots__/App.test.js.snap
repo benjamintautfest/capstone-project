@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders correctly 1`] = `
+<div
+  class="App__AppStyled-c3tp1e-0 bNqrPU"
+>
+  <header>
+    <img
+      alt=""
+      src="logo.svg"
+    />
+  </header>
+  <section>
+    <div>
+      <button
+        class="sc-bdfBwQ CGJgb"
+        id="Montag"
+      >
+        <span
+          class="day"
+        >
+          Montag
+        </span>
+        <span
+          class="meal"
+        >
+          Auswählen
+        </span>
+      </button>
+    </div>
+    <div>
+      <button
+        class="sc-bdfBwQ CGJgb"
+        id="Dienstag"
+      >
+        <span
+          class="day"
+        >
+          Dienstag
+        </span>
+        <span
+          class="meal"
+        >
+          Auswählen
+        </span>
+      </button>
+    </div>
+    <div>
+      <button
+        class="sc-bdfBwQ CGJgb"
+        id="Mittwoch"
+      >
+        <span
+          class="day"
+        >
+          Mittwoch
+        </span>
+        <span
+          class="meal"
+        >
+          Auswählen
+        </span>
+      </button>
+    </div>
+    <div>
+      <button
+        class="sc-bdfBwQ CGJgb"
+        id="Donnerstag"
+      >
+        <span
+          class="day"
+        >
+          Donnerstag
+        </span>
+        <span
+          class="meal"
+        >
+          Auswählen
+        </span>
+      </button>
+    </div>
+    <div>
+      <button
+        class="sc-bdfBwQ CGJgb"
+        id="Freitag"
+      >
+        <span
+          class="day"
+        >
+          Freitag
+        </span>
+        <span
+          class="meal"
+        >
+          Auswählen
+        </span>
+      </button>
+    </div>
+    <div>
+      <button
+        class="sc-bdfBwQ CGJgb"
+        id="Samstag"
+      >
+        <span
+          class="day"
+        >
+          Samstag
+        </span>
+        <span
+          class="meal"
+        >
+          Auswählen
+        </span>
+      </button>
+    </div>
+    <div>
+      <button
+        class="sc-bdfBwQ CGJgb"
+        id="Sonntag"
+      >
+        <span
+          class="day"
+        >
+          Sonntag
+        </span>
+        <span
+          class="meal"
+        >
+          Auswählen
+        </span>
+      </button>
+    </div>
+  </section>
+  <footer />
+</div>
+`;
