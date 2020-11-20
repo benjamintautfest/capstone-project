@@ -21,6 +21,8 @@ export default function App() {
 
     const [selectedWeekday, setSelectedWeekday] = useState('')
 
+    const [showRecipe, setShowRecipe] = useState(false)
+
     function handleClick(event) {
         setSelectedWeekday(event.currentTarget.id)
     }
@@ -33,12 +35,17 @@ export default function App() {
         setWeekdays(updatedWeekdays)
     }
 
+    function handleShowRecipe() {
+        setShowRecipe(true)
+    }
+
     return (
         <AppStyled>
             <header>
                 <img src={logo} alt="" />
             </header>
             <section>
+                <div>{showRecipe ? <p>Hier steht ein Rezept</p> : ''}</div>
                 {weekdays.map(({ weekday, id, meal }) => (
                     <div key={id}>
                         <Button
@@ -51,6 +58,7 @@ export default function App() {
                             <MealSelectMenu
                                 handleMealClick={selectMeal}
                                 weekdayId={id}
+                                handleRecipeClick={handleShowRecipe}
                             />
                         )}
                     </div>

@@ -1,7 +1,12 @@
 import styled from 'styled-components/macro'
 import { v4 as uuidv4 } from 'uuid'
+import { useState } from 'react'
 
-export default function MealSelectMenu({ weekdayId, handleMealClick }) {
+export default function MealSelectMenu({
+    weekdayId,
+    handleMealClick,
+    handleRecipeClick,
+}) {
     const meals = [
         { meal: 'Käsestulle', id: uuidv4() },
         { meal: 'Kartoffelsalat', id: uuidv4() },
@@ -15,13 +20,23 @@ export default function MealSelectMenu({ weekdayId, handleMealClick }) {
     ]
 
     return (
-        <ListStyled>
-            {meals.map(({ meal, id }) => (
-                <li key={id} onClick={() => handleMealClick(meal, weekdayId)}>
-                    {meal}
-                </li>
-            ))}
-        </ListStyled>
+        <>
+            <ListStyled>
+                {meals.map(({ meal, id }) => (
+                    <li key={id}>
+                        {meal}
+                        <div>
+                            <button
+                                onClick={() => handleMealClick(meal, weekdayId)}
+                            >
+                                ok
+                            </button>
+                            <button onClick={handleRecipeClick}>Rezept</button>
+                        </div>
+                    </li>
+                ))}
+            </ListStyled>
+        </>
     )
 }
 
@@ -30,6 +45,17 @@ const ListStyled = styled.ul`
     height: 100px;
     list-style: none;
     overflow: auto;
+
+    div {
+        display: flex;
+    }
+
+    button {
+        border: none;
+        margin-right: 5px;
+        padding: 2px 15px;
+        border-radius: 5px;
+    }
 
     li {
         display: grid;
