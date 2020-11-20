@@ -42,15 +42,18 @@ const SectionStyled = styled.section`
         font-family: 'Sansita Swashed', cursive;
         color: ivory;
         margin: 10px 0 0;
+        padding: 0 0 10px;
         font-size: 2em;
+        border-bottom: 1px dotted white;
     }
 
     span {
         position: absolute;
-        right: 20px;
-        top: 20px;
+        right: 10px;
+        top: 5px;
         font-size: 1.5em;
         color: white;
+        padding: 5px;
     }
 
     p {

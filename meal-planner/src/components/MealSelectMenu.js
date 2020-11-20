@@ -14,7 +14,7 @@ export default function MealSelectMenu({
         { meal: 'Steinpilzrisotto', id: uuidv4() },
         { meal: 'Currywurst', id: uuidv4() },
         { meal: 'Linsensuppe', id: uuidv4() },
-        { meal: 'Tofufrikassee', id: uuidv4() },
+        { meal: 'Spaghetti Carbonara', id: uuidv4() },
         { meal: 'Banana Pancakes', id: uuidv4() },
         { meal: 'Thai Gemüsecurry', id: uuidv4() },
     ]
@@ -70,5 +70,6 @@ const ListStyled = styled.ul`
         padding: 0 30px;
         font-size: 0.8em;
         border-radius: 5px;
+        line-height: 1.3em;
     }
 `

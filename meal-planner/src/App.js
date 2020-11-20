@@ -41,7 +41,6 @@ export default function App() {
     function handleShowRecipe(meal) {
         setShowRecipe(true)
         setSelectdedMeal(meal)
-        console.log(selectedMeal, meal)
     }
 
     function handleCloseRecipe() {
