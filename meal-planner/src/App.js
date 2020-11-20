@@ -7,7 +7,7 @@ import MealSelectMenu from './components/MealSelectMenu'
 import { v4 as uuidv4 } from 'uuid'
 
 export default function App() {
-    const [weekdays, setWeekdays] = useState([
+    const mealPlan = [
         { weekday: 'Montag', id: uuidv4(), meal: '' },
         { weekday: 'Dienstag', id: uuidv4(), meal: '' },
         { weekday: 'Mittwoch', id: uuidv4(), meal: '' },
@@ -15,16 +15,18 @@ export default function App() {
         { weekday: 'Freitag', id: uuidv4(), meal: '' },
         { weekday: 'Samstag', id: uuidv4(), meal: '' },
         { weekday: 'Sonntag', id: uuidv4(), meal: '' },
-    ])
+    ]
 
-    const [selectedWeekday, setSelectedWeekday] = useState(null)
+    const [weekdays, setWeekdays] = useState(mealPlan)
+
+    const [selectedWeekday, setSelectedWeekday] = useState('')
 
     function handleClick(event) {
         setSelectedWeekday(event.currentTarget.id)
     }
 
     function selectMeal(meal, id) {
-        setSelectedWeekday(null)
+        setSelectedWeekday('')
         const updatedWeekdays = weekdays.map((weekday) =>
             weekday.id === id ? { ...weekday, meal } : weekday
         )

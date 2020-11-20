@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { v4 as uuidv4 } from 'uuid'
 
 export default function MealSelectMenu({ weekdayId, handleMealClick }) {
@@ -33,13 +33,12 @@ const ListStyled = styled.ul`
 
     li {
         display: grid;
+        place-items: center;
         background: maroon;
         margin: 5px;
         color: ivory;
-        place-items: center;
         padding: 0 30px;
         font-size: 0.8em;
         border-radius: 5px;
-        line-height: 1.4em;
     }
 `
