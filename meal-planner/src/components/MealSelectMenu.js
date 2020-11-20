@@ -31,7 +31,9 @@ export default function MealSelectMenu({
                             >
                                 ok
                             </button>
-                            <button onClick={handleRecipeClick}>Rezept</button>
+                            <button onClick={() => handleRecipeClick(meal)}>
+                                Rezept
+                            </button>
                         </div>
                     </li>
                 ))}
@@ -48,13 +50,15 @@ const ListStyled = styled.ul`
 
     div {
         display: flex;
+        justify-content: space-space-around;
     }
 
     button {
         border: none;
-        margin-right: 5px;
-        padding: 2px 15px;
+        padding: 5px 10px;
         border-radius: 5px;
+        margin: 0 4px;
+        background: ivory;
     }
 
     li {

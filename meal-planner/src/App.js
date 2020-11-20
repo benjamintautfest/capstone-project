@@ -4,6 +4,7 @@ import woodBackground from './assets/wood_background.jpg'
 import logo from './assets/logo.svg'
 import Button from './components/Button'
 import MealSelectMenu from './components/MealSelectMenu'
+import RecipePage from './components/RecipePage'
 import { v4 as uuidv4 } from 'uuid'
 
 export default function App() {
@@ -23,6 +24,8 @@ export default function App() {
 
     const [showRecipe, setShowRecipe] = useState(false)
 
+    const [selectedMeal, setSelectdedMeal] = useState('')
+
     function handleClick(event) {
         setSelectedWeekday(event.currentTarget.id)
     }
@@ -35,8 +38,14 @@ export default function App() {
         setWeekdays(updatedWeekdays)
     }
 
-    function handleShowRecipe() {
+    function handleShowRecipe(meal) {
         setShowRecipe(true)
+        setSelectdedMeal(meal)
+        console.log(selectedMeal, meal)
+    }
+
+    function handleCloseRecipe() {
+        setShowRecipe(false)
     }
 
     return (
@@ -45,7 +54,14 @@ export default function App() {
                 <img src={logo} alt="" />
             </header>
             <section>
-                <div>{showRecipe ? <p>Hier steht ein Rezept</p> : ''}</div>
+                {showRecipe ? (
+                    <RecipePage
+                        recipeTitle={selectedMeal}
+                        closeRecipe={handleCloseRecipe}
+                    />
+                ) : (
+                    ''
+                )}
                 {weekdays.map(({ weekday, id, meal }) => (
                     <div key={id}>
                         <Button

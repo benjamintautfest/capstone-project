@@ -11,9 +11,10 @@ exports[`App renders correctly 1`] = `
     />
   </header>
   <section>
+    
     <div>
       <button
-        class="sc-bdfBwQ CGJgb"
+        class="Button__ButtonStyled-sc-102td2i-0 cTEKEK"
         id="Montag"
       >
         <span
@@ -30,7 +31,7 @@ exports[`App renders correctly 1`] = `
     </div>
     <div>
       <button
-        class="sc-bdfBwQ CGJgb"
+        class="Button__ButtonStyled-sc-102td2i-0 cTEKEK"
         id="Dienstag"
       >
         <span
@@ -47,7 +48,7 @@ exports[`App renders correctly 1`] = `
     </div>
     <div>
       <button
-        class="sc-bdfBwQ CGJgb"
+        class="Button__ButtonStyled-sc-102td2i-0 cTEKEK"
         id="Mittwoch"
       >
         <span
@@ -64,7 +65,7 @@ exports[`App renders correctly 1`] = `
     </div>
     <div>
       <button
-        class="sc-bdfBwQ CGJgb"
+        class="Button__ButtonStyled-sc-102td2i-0 cTEKEK"
         id="Donnerstag"
       >
         <span
@@ -81,7 +82,7 @@ exports[`App renders correctly 1`] = `
     </div>
     <div>
       <button
-        class="sc-bdfBwQ CGJgb"
+        class="Button__ButtonStyled-sc-102td2i-0 cTEKEK"
         id="Freitag"
       >
         <span
@@ -98,7 +99,7 @@ exports[`App renders correctly 1`] = `
     </div>
     <div>
       <button
-        class="sc-bdfBwQ CGJgb"
+        class="Button__ButtonStyled-sc-102td2i-0 cTEKEK"
         id="Samstag"
       >
         <span
@@ -115,7 +116,7 @@ exports[`App renders correctly 1`] = `
     </div>
     <div>
       <button
-        class="sc-bdfBwQ CGJgb"
+        class="Button__ButtonStyled-sc-102td2i-0 cTEKEK"
         id="Sonntag"
       >
         <span
