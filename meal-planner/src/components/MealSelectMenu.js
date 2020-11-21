@@ -20,25 +20,23 @@ export default function MealSelectMenu({
     ]
 
     return (
-        <>
-            <ListStyled>
-                {meals.map(({ meal, id }) => (
-                    <li key={id}>
-                        {meal}
-                        <div>
-                            <button
-                                onClick={() => handleMealClick(meal, weekdayId)}
-                            >
-                                ok
-                            </button>
-                            <button onClick={() => handleRecipeClick(meal)}>
-                                Rezept
-                            </button>
-                        </div>
-                    </li>
-                ))}
-            </ListStyled>
-        </>
+        <ListStyled>
+            {meals.map(({ meal, id }) => (
+                <li key={id}>
+                    {meal}
+                    <div>
+                        <button
+                            onClick={() => handleMealClick(meal, weekdayId)}
+                        >
+                            ok
+                        </button>
+                        <button onClick={() => handleRecipeClick(meal)}>
+                            Rezept
+                        </button>
+                    </div>
+                </li>
+            ))}
+        </ListStyled>
     )
 }
 

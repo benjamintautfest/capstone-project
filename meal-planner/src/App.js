@@ -95,7 +95,7 @@ const AppStyled = styled.div`
     max-width: 600px;
 
     header {
-        box-shadow: 0 5px 5px #ee000000;
+        //   box-shadow: 30px 0 30px #b16c16;
     }
 
     h1 {
