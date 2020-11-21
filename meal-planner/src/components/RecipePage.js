@@ -1,7 +1,11 @@
 import styled from 'styled-components/macro'
 import risotto from '../assets/risotto.png'
 
-export default function RecipePage({ closeRecipe, recipeTitle }) {
+export default function RecipePage({
+    closeRecipe,
+    recipeTitle,
+    recipeIngredients,
+}) {
     return (
         <SectionStyled>
             <span onClick={closeRecipe}>&times;</span>

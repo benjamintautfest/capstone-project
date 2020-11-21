@@ -1,24 +1,11 @@
 import styled from 'styled-components/macro'
-import { v4 as uuidv4 } from 'uuid'
-import { useState } from 'react'
+import meals from './recipeData'
 
 export default function MealSelectMenu({
     weekdayId,
     handleMealClick,
     handleRecipeClick,
 }) {
-    const meals = [
-        { meal: 'Käsestulle', id: uuidv4() },
-        { meal: 'Kartoffelsalat', id: uuidv4() },
-        { meal: 'Gemüselasagne', id: uuidv4() },
-        { meal: 'Steinpilzrisotto', id: uuidv4() },
-        { meal: 'Currywurst', id: uuidv4() },
-        { meal: 'Linsensuppe', id: uuidv4() },
-        { meal: 'Spaghetti Carbonara', id: uuidv4() },
-        { meal: 'Banana Pancakes', id: uuidv4() },
-        { meal: 'Thai Gemüsecurry', id: uuidv4() },
-    ]
-
     return (
         <ListStyled>
             {meals.map(({ meal, id }) => (
