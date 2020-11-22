@@ -6,6 +6,7 @@ import Button from './components/Button'
 import MealSelectMenu from './components/MealSelectMenu'
 import RecipePage from './components/RecipePage'
 import { v4 as uuidv4 } from 'uuid'
+import recipes from './components/recipeData'
 
 export default function App() {
     const mealPlan = [
@@ -24,7 +25,7 @@ export default function App() {
 
     const [showRecipe, setShowRecipe] = useState(false)
 
-    const [selectedMeal, setSelectdedMeal] = useState('')
+    const [selectedMealTitle, setSelectdedMealTitle] = useState('')
 
     function handleClick(event) {
         setSelectedWeekday(event.currentTarget.id)
@@ -40,7 +41,7 @@ export default function App() {
 
     function handleShowRecipe(meal) {
         setShowRecipe(true)
-        setSelectdedMeal(meal)
+        setSelectdedMealTitle(meal)
     }
 
     function handleCloseRecipe() {
@@ -55,8 +56,9 @@ export default function App() {
             <section>
                 {showRecipe ? (
                     <RecipePage
-                        recipeTitle={selectedMeal}
                         closeRecipe={handleCloseRecipe}
+                        recipeTitle={selectedMealTitle}
+                        recipeIngredients={selectedMealTitle}
                     />
                 ) : (
                     ''

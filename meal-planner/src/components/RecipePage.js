@@ -5,30 +5,26 @@ export default function RecipePage({
     closeRecipe,
     recipeTitle,
     recipeIngredients,
+    recipeInstructions,
 }) {
     return (
         <SectionStyled>
             <span onClick={closeRecipe}>&times;</span>
-
             <h2>{recipeTitle}</h2>
             <img src={risotto} alt="risotto" />
             <ul>
-                <li>120 g Risottoreis (ca. 1/2 – 1 Tasse)</li>
-                <li>1 kl Zwiebel oder 2 Schalotten</li>
-                <li>Butter oder Butterschmalz</li>
-                <li>100 ml Weißwein trocken</li>
-                <li>ca. 1/2 l Gemüsebrühe</li>
-                <li>Parmesankäse gerieben</li>
+                <li>getrocknete Steinpilze</li>
+                <li>Zwiebel</li>
+                <li>Knoblauch</li>
+                <li>Risottoreis</li>
             </ul>
             <p>
-                Die Butter / Butterschmalz in einem Topf heiß werden lassen und
-                die Zwiebel glasig braten. Den Risottoreis zugeben und kurz mit
-                anschwitzen. Mit dem Weißwein ablöschen, dann etwas Brühe
-                zugeben. Sobald die Brühe verdampft ist, weitere hinzufügen.
-                Regelmäßig umrühren, damit der Risotto nicht anhängt. Sobald die
-                zuvor zugefügte Brühe durch den Reis aufgenommen wurde, weitere
-                Brühe angießen. So lange umrühren und Brühe zufügen bis der Reis
-                gar ist.
+                Die getrockneten Steinpilze in eine Schüssel geben und mit
+                heißem Wasser übergießen. Ca. 20 Min. ziehen lassen und
+                anschließend abgießen. Frische Steinpilze in mundgerechte Stüce
+                schneiden. Zwiebel und Knoblauch schälen und fein hacken. Butter
+                in einem großen Topf über mittlerer Hitze schmelzen und Zwiebel
+                und Knoblauch darin ca. 3 Min. anschwitzen.
             </p>
         </SectionStyled>
     )
@@ -41,6 +37,7 @@ const SectionStyled = styled.section`
     height: 100%;
     display: block;
     padding: 0 30px;
+    width: 100%;
 
     h2 {
         font-family: 'Sansita Swashed', cursive;
@@ -64,7 +61,6 @@ const SectionStyled = styled.section`
         color: white;
         line-height: 1.5em;
         text-align: left;
-        font-size: 0.88em;
         color: ivory;
     }
 
@@ -74,7 +70,6 @@ const SectionStyled = styled.section`
         padding: 10px 0 10px;
         line-height: 1.5em;
         list-style-position: inside;
-        font-size: 0.88em;
         color: ivory;
         border-bottom: ivory dotted 1px;
         border-top: ivory dotted 1px;
