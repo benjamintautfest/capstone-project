@@ -6,7 +6,8 @@ import Button from './components/Button'
 import MealSelectMenu from './components/MealSelectMenu'
 import RecipePage from './components/RecipePage'
 import { v4 as uuidv4 } from 'uuid'
-import recipes from './components/recipeData'
+import recipes from './data/recipeData'
+import meals from './components/recipeData'
 
 export default function App() {
     const mealPlan = [
@@ -39,11 +40,13 @@ export default function App() {
         setWeekdays(updatedWeekdays)
     }
 
+    //button to show recipe
     function handleShowRecipe(meal) {
         setShowRecipe(true)
         setSelectdedMealTitle(meal)
     }
 
+    //closing box on recipe page
     function handleCloseRecipe() {
         setShowRecipe(false)
     }
@@ -58,7 +61,12 @@ export default function App() {
                     <RecipePage
                         closeRecipe={handleCloseRecipe}
                         recipeTitle={selectedMealTitle}
-                        recipeIngredients={selectedMealTitle}
+                        recipeIngredients={meals.map(
+                            (meal) => meal.ingredients
+                        )}
+                        recipeInstructions={meals.map(
+                            (meal) => meal.instructions
+                        )}
                     />
                 ) : (
                     ''

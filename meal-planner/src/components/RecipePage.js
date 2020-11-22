@@ -3,6 +3,8 @@ import risotto from '../assets/risotto.png'
 
 export default function RecipePage({
     closeRecipe,
+    meals,
+    recipeId,
     recipeTitle,
     recipeIngredients,
     recipeInstructions,
@@ -26,6 +28,7 @@ export default function RecipePage({
                 in einem großen Topf über mittlerer Hitze schmelzen und Zwiebel
                 und Knoblauch darin ca. 3 Min. anschwitzen.
             </p>
+            <p>{recipeInstructions}</p>
         </SectionStyled>
     )
 }
