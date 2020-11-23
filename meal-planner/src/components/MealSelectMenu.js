@@ -49,6 +49,7 @@ const ListStyled = styled.ul`
     height: 100px;
     list-style: none;
     overflow: auto;
+    scrollbar-width: none;
 
     div {
         display: flex;

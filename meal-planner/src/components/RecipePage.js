@@ -32,6 +32,7 @@ const SectionStyled = styled.section`
     display: block;
     padding: 0 30px;
     width: 100%;
+    scrollbar-width: none;
 
     h2 {
         font-family: 'Sansita Swashed', cursive;
@@ -62,9 +63,8 @@ const SectionStyled = styled.section`
     ul {
         text-align: left;
         color: ivory;
-        padding: 10px 0 10px;
+        padding: 15px;
         line-height: 1.5em;
-        list-style-position: inside;
         color: ivory;
         border-bottom: ivory dotted 1px;
         border-top: ivory dotted 1px;

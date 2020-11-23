@@ -146,7 +146,7 @@ export default function App() {
 
 const AppStyled = styled.div`
     display: grid;
-    grid-template-rows: 180px auto 48px;
+    grid-template-rows: 190px auto 48px;
     font-family: sans-serif;
     text-align: center;
     background: url(${woodBackground});
@@ -155,7 +155,8 @@ const AppStyled = styled.div`
     max-width: 600px;
 
     header {
-        //   box-shadow: 30px 0 30px #b16c16;
+        box-shadow: 10px 0 30px #b16c16;
+        padding-bottom: 20px;
     }
 
     h1 {
@@ -170,9 +171,14 @@ const AppStyled = styled.div`
 
     section {
         overflow: auto;
+        padding-top: 10px;
+        scrollbar-width: none;
+        z-index: 9999;
     }
 
     footer {
-        background: white;
+        background: transparent;
+        box-shadow: -10px 0 30px #b16c16;
+        z-index: 0;
     }
 `
