@@ -6,18 +6,59 @@ import Button from './components/Button'
 import MealSelectMenu from './components/MealSelectMenu'
 import RecipePage from './components/RecipePage'
 import { v4 as uuidv4 } from 'uuid'
-import recipes from './data/recipeData'
-import meals from './components/recipeData'
+import recipeData from './data/recipeData.json'
 
 export default function App() {
     const mealPlan = [
-        { weekday: 'Montag', id: uuidv4(), meal: '' },
-        { weekday: 'Dienstag', id: uuidv4(), meal: '' },
-        { weekday: 'Mittwoch', id: uuidv4(), meal: '' },
-        { weekday: 'Donnerstag', id: uuidv4(), meal: '' },
-        { weekday: 'Freitag', id: uuidv4(), meal: '' },
-        { weekday: 'Samstag', id: uuidv4(), meal: '' },
-        { weekday: 'Sonntag', id: uuidv4(), meal: '' },
+        {
+            weekday: 'Montag',
+            id: uuidv4(),
+            meal: '',
+            instructions: '',
+            ingredients: '',
+        },
+        {
+            weekday: 'Dienstag',
+            id: uuidv4(),
+            meal: '',
+            instructions: '',
+            ingredients: '',
+        },
+        {
+            weekday: 'Mittwoch',
+            id: uuidv4(),
+            meal: '',
+            instructions: '',
+            ingredients: '',
+        },
+        {
+            weekday: 'Donnerstag',
+            id: uuidv4(),
+            meal: '',
+            instructions: '',
+            ingredients: '',
+        },
+        {
+            weekday: 'Freitag',
+            id: uuidv4(),
+            meal: '',
+            instructions: '',
+            ingredients: '',
+        },
+        {
+            weekday: 'Samstag',
+            id: uuidv4(),
+            meal: '',
+            instructions: '',
+            ingredients: '',
+        },
+        {
+            weekday: 'Sonntag',
+            id: uuidv4(),
+            meal: '',
+            instructions: '',
+            ingredients: '',
+        },
     ]
 
     const [weekdays, setWeekdays] = useState(mealPlan)
@@ -27,23 +68,30 @@ export default function App() {
     const [showRecipe, setShowRecipe] = useState(false)
 
     const [selectedMealTitle, setSelectdedMealTitle] = useState('')
+    const [selectedMealInstructions, setSelectedMealInstructions] = useState('')
+    const [selectedMealIngredients, setSelectedMealingredients] = useState('')
 
     function handleClick(event) {
         setSelectedWeekday(event.currentTarget.id)
     }
 
-    function selectMeal(meal, id) {
+    function selectMeal(meal, id, instructions, ingredients) {
         setSelectedWeekday('')
         const updatedWeekdays = weekdays.map((weekday) =>
-            weekday.id === id ? { ...weekday, meal } : weekday
+            weekday.id === id
+                ? { ...weekday, meal, ingredients, instructions }
+                : weekday
         )
         setWeekdays(updatedWeekdays)
     }
 
     //button to show recipe
-    function handleShowRecipe(meal) {
+    function handleShowRecipe(meal, ingredients, instructions) {
         setShowRecipe(true)
         setSelectdedMealTitle(meal)
+        setSelectedMealingredients(ingredients)
+
+        setSelectedMealInstructions(instructions)
     }
 
     //closing box on recipe page
@@ -60,13 +108,9 @@ export default function App() {
                 {showRecipe ? (
                     <RecipePage
                         closeRecipe={handleCloseRecipe}
-                        recipeTitle={selectedMealTitle}
-                        recipeIngredients={meals.map(
-                            (meal) => meal.ingredients
-                        )}
-                        recipeInstructions={meals.map(
-                            (meal) => meal.instructions
-                        )}
+                        title={selectedMealTitle}
+                        ingredients={selectedMealIngredients}
+                        instructions={selectedMealInstructions}
                     />
                 ) : (
                     ''

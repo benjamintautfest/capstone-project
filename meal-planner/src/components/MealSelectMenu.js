@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import meals from './recipeData'
+import meals from '../data/recipeData.json'
 
 export default function MealSelectMenu({
     weekdayId,
@@ -8,16 +8,31 @@ export default function MealSelectMenu({
 }) {
     return (
         <ListStyled>
-            {meals.map(({ meal, id }) => (
+            {meals.map(({ meal, id, ingredients, instructions }) => (
                 <li key={id}>
                     {meal}
                     <div>
                         <button
-                            onClick={() => handleMealClick(meal, weekdayId)}
+                            onClick={() =>
+                                handleMealClick(
+                                    meal,
+                                    weekdayId,
+                                    ingredients,
+                                    instructions
+                                )
+                            }
                         >
                             ok
                         </button>
-                        <button onClick={() => handleRecipeClick(meal)}>
+                        <button
+                            onClick={() =>
+                                handleRecipeClick(
+                                    meal,
+                                    ingredients,
+                                    instructions
+                                )
+                            }
+                        >
                             Rezept
                         </button>
                     </div>

@@ -1,34 +1,22 @@
 import styled from 'styled-components/macro'
 import risotto from '../assets/risotto.png'
+import recipes from '../data/recipeData.json'
 
 export default function RecipePage({
     closeRecipe,
     meals,
-    recipeId,
-    recipeTitle,
-    recipeIngredients,
-    recipeInstructions,
+    id,
+    title,
+    ingredients,
+    instructions,
 }) {
     return (
-        <SectionStyled>
+        <SectionStyled key={id}>
             <span onClick={closeRecipe}>&times;</span>
-            <h2>{recipeTitle}</h2>
+            <h2>{title}</h2>
             <img src={risotto} alt="risotto" />
-            <ul>
-                <li>getrocknete Steinpilze</li>
-                <li>Zwiebel</li>
-                <li>Knoblauch</li>
-                <li>Risottoreis</li>
-            </ul>
-            <p>
-                Die getrockneten Steinpilze in eine Schüssel geben und mit
-                heißem Wasser übergießen. Ca. 20 Min. ziehen lassen und
-                anschließend abgießen. Frische Steinpilze in mundgerechte Stüce
-                schneiden. Zwiebel und Knoblauch schälen und fein hacken. Butter
-                in einem großen Topf über mittlerer Hitze schmelzen und Zwiebel
-                und Knoblauch darin ca. 3 Min. anschwitzen.
-            </p>
-            <p>{recipeInstructions}</p>
+            <ul>{ingredients}</ul>
+            <p>{instructions}</p>
         </SectionStyled>
     )
 }

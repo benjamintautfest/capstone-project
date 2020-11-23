@@ -9,13 +9,13 @@
         "id": "02",
         "meal": "Kartoffelsalat",
         "instructions": "Kartoffeln kochen",
-        "ingredients": ["Käse", "Stulle", "Butter"]
+        "ingredients": ["Kartoffeln", "Salat", "Essig"]
     },
     {
         "id": "03",
         "meal": "Gemüselasagne",
         "instructions": "Lasagne in Ofen",
-        "ingredients": ["Käse", "Stulle", "Butter"]
+        "ingredients": ["Gemüse", "Käse", "Lasagne"]
     },
     {
         "id": "04",
@@ -33,30 +33,30 @@
         "id": "05",
         "meal": "Currywurst",
         "instructions": "Wurst braten",
-        "ingredients": ["Käse", "Stulle", "Butter"]
+        "ingredients": ["Wurst", "Curry", "Ketchup"]
     },
     {
         "id": "06",
         "meal": "Linsensuppe",
         "instructions": "Dose aufmachen",
-        "ingredients": ["Käse", "Stulle", "Butter"]
+        "ingredients": ["Linsen", "Suppe", "Löffel"]
     },
     {
         "id": "07",
         "meal": "Spaghetti Carbonara",
         "instructions": "Nudeln kochen",
-        "ingredients": ["Käse", "Stulle", "Butter"]
+        "ingredients": ["Spaghetti", "Speck", "Eier"]
     },
     {
         "id": "08",
         "meal": "Banana Pancakes",
         "instructions": "Pfannekuchen backen",
-        "ingredients": ["Käse", "Stulle", "Butter"]
+        "ingredients": ["Bananen", "Eier", "Mehl"]
     },
     {
         "id": "09",
         "meal": "Thai Gemüsecurry",
         "instructions": "Curry kochen",
-        "ingredients": ["Käse", "Stulle", "Butter"]
+        "ingredients": ["Gmüse", "Curry", "Reis"]
     }
 ]
