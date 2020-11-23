@@ -71,10 +71,12 @@ export default function App() {
     const [selectedWeekday, setSelectedWeekday] = useState('')
     const [showRecipe, setShowRecipe] = useState(false)
 
-    const [selectedMealTitle, setSelectdedMealTitle] = useState('')
-    const [selectedMealInstructions, setSelectedMealInstructions] = useState('')
-    const [selectedMealIngredients, setSelectedMealingredients] = useState('')
-    const [selectedImage, setSelectedImage] = useState('')
+    const [selectedMeal, setSelectedMeal] = useState({
+        title: '',
+        instructions: '',
+        ingredients: '',
+        image: '',
+    })
 
     function handleClick(event) {
         setSelectedWeekday(event.currentTarget.id)
@@ -90,16 +92,16 @@ export default function App() {
         setWeekdays(updatedWeekdays)
     }
 
-    //button to show recipe
     function handleShowRecipe(meal, ingredients, instructions, image) {
         setShowRecipe(true)
-        setSelectdedMealTitle(meal)
-        setSelectedMealingredients(ingredients)
-        setSelectedImage(image)
-        setSelectedMealInstructions(instructions)
+        setSelectedMeal({
+            title: meal,
+            ingredients,
+            instructions,
+            image,
+        })
     }
 
-    //closing box on recipe page
     function handleCloseRecipe() {
         setShowRecipe(false)
     }
@@ -113,10 +115,10 @@ export default function App() {
                 {showRecipe ? (
                     <RecipePage
                         closeRecipe={handleCloseRecipe}
-                        title={selectedMealTitle}
-                        image={selectedImage}
-                        ingredients={selectedMealIngredients}
-                        instructions={selectedMealInstructions}
+                        title={selectedMeal.title}
+                        image={selectedMeal.image}
+                        ingredients={selectedMeal.ingredients}
+                        instructions={selectedMeal.instructions}
                     />
                 ) : (
                     ''
