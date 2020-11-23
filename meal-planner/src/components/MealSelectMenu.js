@@ -23,7 +23,7 @@ export default function MealSelectMenu({
                                 )
                             }
                         >
-                            ok
+                            übernehmen
                         </button>
                         <button
                             onClick={() =>

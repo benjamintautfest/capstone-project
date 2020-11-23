@@ -156,7 +156,7 @@ const AppStyled = styled.div`
 
     header {
         box-shadow: 10px 0 30px #b16c16;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     }
 
     h1 {
