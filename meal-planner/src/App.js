@@ -68,9 +68,7 @@ export default function App() {
     ]
 
     const [weekdays, setWeekdays] = useState(mealPlan)
-
     const [selectedWeekday, setSelectedWeekday] = useState('')
-
     const [showRecipe, setShowRecipe] = useState(false)
 
     const [selectedMealTitle, setSelectdedMealTitle] = useState('')

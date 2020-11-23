@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro'
-import risotto from '../assets/risotto.png'
 
 export default function RecipePage({
     closeRecipe,
@@ -75,5 +74,6 @@ const SectionStyled = styled.section`
         margin-bottom: 10px;
         display: box;
         margin-left: 30px;
+        filter: drop-shadow(0px 0px 10px #5d1821);
     }
 `

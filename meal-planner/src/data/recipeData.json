@@ -1,6 +1,24 @@
 [
     {
         "id": "01",
+        "meal": "Gemüselasagne",
+        "image": "/images/lasagna.png",
+        "instructions": "Karotten, Champignons und Zwiebel schälen, schneiden und zuerst die Zwiebelwürfel in einer Pfanne anbraten, bis sie glasig sind. Danach das restliche Gemüse dazugeben und kurz mitbraten. 5 EL Milch dazugeben und den Rahmspinat darin erhitzen, bis die Blätter nicht mehr gefroren sind und die Rahmsoße leicht eingedickt ist. Jetzt den Frischkäse sowie die Gemüsebrühe dazugeben und gut verrühren. Fünf Minuten köcheln lassen, bis die Soße schön eingedickt ist. Zum Schluss die Knoblauchzehe dazu pressen und mit Salz, Pfeffer und Chili abschmecken. Das Spinatgemisch darf ruhig gut würzig sein, da der Spinat beim Backen relativ viel Salz schluckt",
+        "ingredients": [
+            "600 g Blattspinat",
+            "2 große Karotten",
+            "7 große Champignons",
+            "1 große Zwiebe",
+            "500 ml Tomaten, passierte ",
+            "3 EL Butter ",
+            "5 EL Milch ",
+            "5 EL Milch ",
+            "1 Paket Lasagneplatten"
+        ]
+    },
+
+    {
+        "id": "02",
         "meal": "Vegetarisches Chili",
         "image": "/images/chili.png",
         "instructions": "Das vegetarische Hack in einer Pfanne mit heißem Öl anbraten. Mit Salz, Pfeffer und Paprikagewürz würzen. Zwiebeln in Ringe schneiden, Paprika stückeln und alles in der Pfanne mit anbraten. Nach Belieben mit Knoblauch und Chili würzen. Tomaten, Tomatenmark und Gemüsebrühe hinzugeben, bei kleiner Hitze ca. 20 Min garen. Bohnen mit Wasser abspülen, mit dem Mais in die Pfanne geben, alles noch etwas weiter köcheln lassen. Mit Salz, Pfeffer, Paprika und Chili kräftig abschmecken.",
@@ -14,23 +32,9 @@
         ]
     },
     {
-        "id": "02",
-        "meal": "Kartoffelsalat",
-        "image": "/images/chili.png",
-        "instructions": "Kartoffeln kochen",
-        "ingredients": ["Kartoffeln", "Salat", "Essig"]
-    },
-    {
         "id": "03",
-        "meal": "Gemüselasagne",
-        "image": "/images/chili.png",
-        "instructions": "Schichten Sie beide Soßen die Nudelplatten und das Gemüse in eine Auflaufform und belegen Sie alles großzügik mit Mozzarella. Überbacken Sie alles, bis es schön schlotzig ist",
-        "ingredients": ["Gemüse", "Käse", "Lasagne"]
-    },
-    {
-        "id": "04",
         "meal": "Steinpilzrisotto",
-        "image": "/images/chili.png",
+        "image": "/images/risotto.png",
         "instructions": "Die getrockneten Steinpilze in eine Schüssel geben und mit heißem Wasser übergießen. Ca. 20 Min. ziehen lassen und anschließend abgießen. Frische Steinpilze in mundgerechte Stüce schneiden. Zwiebel und Knoblauch schälen und fein hacken. Butter in einem großen Topf über mittlerer Hitze schmelzen und Zwiebel und Knoblauch darin ca. 3 Min. anschwitzen.",
         "ingredients": [
             "getrocknete Steinpilze",
@@ -40,38 +44,55 @@
             "Risottoreis"
         ]
     },
+
+    {
+        "id": "04",
+        "meal": "Banana Pancakes",
+        "image": "/images/pancake.png",
+        "instructions": "Die Bananen mit der Gabel zerquetschen und die restlichen Zutaten dazugeben, zu einem glatten Teig verrühren. Öl in eine flache (am besten Crêpes-) Pfanne tun und auf dem Herd wie Crêpes ausbacken. Lecker dazu: Nutella oder Marmelade. ",
+        "ingredients": [
+            "2 Bananen",
+            "2 Eier",
+            "110 g Mehl",
+            "2 El Öl",
+            "1 Prise Salz"
+        ]
+    },
     {
         "id": "05",
+        "meal": "Kartoffelsalat",
+        "image": "/images/chili.png",
+        "instructions": "Kartoffeln kochen",
+        "ingredients": ["Kartoffeln", "Salat", "Essig"]
+    },
+
+    {
+        "id": "06",
         "meal": "Currywurst",
         "image": "/images/chili.png",
         "instructions": "Wurst braten, mit Paprikapulver und Curry bestreuen, in Ketchup ersäufen und an in tiefem Fett ausgebackenen Kartoffestiften servieren.",
         "ingredients": ["Wurst", "Curry", "Ketchup"]
     },
     {
-        "id": "06",
+        "id": "07",
         "meal": "Linsensuppe",
         "image": "/images/chili.png",
         "instructions": "Dose aufmachen",
         "ingredients": ["Linsen", "Suppe", "Löffel"]
     },
     {
-        "id": "07",
+        "id": "08",
         "meal": "Spaghetti Carbonara",
         "image": "/images/chili.png",
         "instructions": "Nudeln kochen",
         "ingredients": ["Spaghetti", "Speck", "Eier"]
     },
-    {
-        "id": "08",
-        "meal": "Banana Pancakes",
-        "image": "/images/chili.png",
-        "instructions": "Eier Mehl und Sosenmilch verquirlen, mit einer Gabel Bananen zerrdrücken und den ganzen Kram in der Pfanne kross aufbraten, Diggi",
-        "ingredients": ["Bananen", "Eier", "Mehl"]
-    },
+
     {
         "id": "09",
         "meal": "Thai Gemüsecurry",
         "image": "/images/chili.png",
+
         "instructions": "Curry kochen",
         "ingredients": ["Gmüse", "Curry", "Reis"]
     }
