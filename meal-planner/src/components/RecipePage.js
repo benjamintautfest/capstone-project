@@ -6,6 +6,7 @@ export default function RecipePage({
     meals,
     id,
     title,
+    image,
     ingredients,
     instructions,
 }) {
@@ -13,7 +14,7 @@ export default function RecipePage({
         <SectionStyled key={id}>
             <span onClick={closeRecipe}>&times;</span>
             <h2>{title}</h2>
-            <img src={risotto} alt="risotto" />
+            <img src={image} alt={image} />
             <ul>
                 {ingredients.map((ingredient, index) => (
                     <li key={index}>{ingredient}</li>
@@ -54,8 +55,9 @@ const SectionStyled = styled.section`
     p {
         color: white;
         line-height: 1.5em;
-        text-align: left;
         color: ivory;
+        hyphens: auto;
+        text-align: left;
     }
 
     ul {

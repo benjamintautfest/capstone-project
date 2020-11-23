@@ -15,6 +15,7 @@ export default function App() {
             meal: '',
             instructions: '',
             ingredients: '',
+            image: '',
         },
         {
             weekday: 'Dienstag',
@@ -22,6 +23,7 @@ export default function App() {
             meal: '',
             instructions: '',
             ingredients: '',
+            image: '',
         },
         {
             weekday: 'Mittwoch',
@@ -29,6 +31,7 @@ export default function App() {
             meal: '',
             instructions: '',
             ingredients: '',
+            image: '',
         },
         {
             weekday: 'Donnerstag',
@@ -36,6 +39,7 @@ export default function App() {
             meal: '',
             instructions: '',
             ingredients: '',
+            image: '',
         },
         {
             weekday: 'Freitag',
@@ -43,6 +47,7 @@ export default function App() {
             meal: '',
             instructions: '',
             ingredients: '',
+            image: '',
         },
         {
             weekday: 'Samstag',
@@ -50,6 +55,7 @@ export default function App() {
             meal: '',
             instructions: '',
             ingredients: '',
+            image: '',
         },
         {
             weekday: 'Sonntag',
@@ -57,6 +63,7 @@ export default function App() {
             meal: '',
             instructions: '',
             ingredients: '',
+            image: '',
         },
     ]
 
@@ -69,27 +76,28 @@ export default function App() {
     const [selectedMealTitle, setSelectdedMealTitle] = useState('')
     const [selectedMealInstructions, setSelectedMealInstructions] = useState('')
     const [selectedMealIngredients, setSelectedMealingredients] = useState('')
+    const [selectedImage, setSelectedImage] = useState('')
 
     function handleClick(event) {
         setSelectedWeekday(event.currentTarget.id)
     }
 
-    function selectMeal(meal, id, instructions, ingredients) {
+    function selectMeal(meal, id, instructions, ingredients, image) {
         setSelectedWeekday('')
         const updatedWeekdays = weekdays.map((weekday) =>
             weekday.id === id
-                ? { ...weekday, meal, ingredients, instructions }
+                ? { ...weekday, meal, ingredients, instructions, image }
                 : weekday
         )
         setWeekdays(updatedWeekdays)
     }
 
     //button to show recipe
-    function handleShowRecipe(meal, ingredients, instructions) {
+    function handleShowRecipe(meal, ingredients, instructions, image) {
         setShowRecipe(true)
         setSelectdedMealTitle(meal)
         setSelectedMealingredients(ingredients)
-
+        setSelectedImage(image)
         setSelectedMealInstructions(instructions)
     }
 
@@ -108,6 +116,7 @@ export default function App() {
                     <RecipePage
                         closeRecipe={handleCloseRecipe}
                         title={selectedMealTitle}
+                        image={selectedImage}
                         ingredients={selectedMealIngredients}
                         instructions={selectedMealInstructions}
                     />

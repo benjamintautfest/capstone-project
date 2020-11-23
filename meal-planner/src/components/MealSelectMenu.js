@@ -8,7 +8,7 @@ export default function MealSelectMenu({
 }) {
     return (
         <ListStyled>
-            {meals.map(({ meal, id, ingredients, instructions }) => (
+            {meals.map(({ meal, id, ingredients, instructions, image }) => (
                 <li key={id}>
                     {meal}
                     <div>
@@ -17,10 +17,9 @@ export default function MealSelectMenu({
                                 handleMealClick(
                                     meal,
                                     weekdayId,
-                                    ingredients.map((ingredient) => (
-                                        <li>ingredient</li>
-                                    )),
-                                    instructions
+                                    ingredients,
+                                    instructions,
+                                    image
                                 )
                             }
                         >
@@ -31,7 +30,8 @@ export default function MealSelectMenu({
                                 handleRecipeClick(
                                     meal,
                                     ingredients,
-                                    instructions
+                                    instructions,
+                                    image
                                 )
                             }
                         >
