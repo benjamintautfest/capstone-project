@@ -1,6 +1,5 @@
 import styled from 'styled-components/macro'
 import risotto from '../assets/risotto.png'
-import recipes from '../data/recipeData.json'
 
 export default function RecipePage({
     closeRecipe,
@@ -15,7 +14,11 @@ export default function RecipePage({
             <span onClick={closeRecipe}>&times;</span>
             <h2>{title}</h2>
             <img src={risotto} alt="risotto" />
-            <ul>{ingredients}</ul>
+            <ul>
+                {ingredients.map((ingredient, index) => (
+                    <li key={index}>{ingredient}</li>
+                ))}
+            </ul>
             <p>{instructions}</p>
         </SectionStyled>
     )

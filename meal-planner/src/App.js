@@ -6,7 +6,6 @@ import Button from './components/Button'
 import MealSelectMenu from './components/MealSelectMenu'
 import RecipePage from './components/RecipePage'
 import { v4 as uuidv4 } from 'uuid'
-import recipeData from './data/recipeData.json'
 
 export default function App() {
     const mealPlan = [

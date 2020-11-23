@@ -17,7 +17,9 @@ export default function MealSelectMenu({
                                 handleMealClick(
                                     meal,
                                     weekdayId,
-                                    ingredients,
+                                    ingredients.map((ingredient) => (
+                                        <li>ingredient</li>
+                                    )),
                                     instructions
                                 )
                             }

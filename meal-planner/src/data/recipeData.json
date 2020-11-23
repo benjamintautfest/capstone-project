@@ -2,7 +2,7 @@
     {
         "id": "01",
         "meal": "Käsestulle",
-        "instructions": "Stulle schmieren",
+        "instructions": "Bestreichen Sie eine Scheibe Brot großzügig mit Butter und applizieren Sie eine Scheibe würzigen Scheibenkäse. Guten Appetit",
         "ingredients": ["Käse", "Stulle", "Butter"]
     },
     {
@@ -14,7 +14,7 @@
     {
         "id": "03",
         "meal": "Gemüselasagne",
-        "instructions": "Lasagne in Ofen",
+        "instructions": "Schichten Sie beide Soßen die Nudelplatten und das Gemüse in eine Auflaufform und belegen Sie alles großzügik mit Mozzarella. Überbacken Sie alles, bis es schön schlotzig ist",
         "ingredients": ["Gemüse", "Käse", "Lasagne"]
     },
     {
@@ -32,7 +32,7 @@
     {
         "id": "05",
         "meal": "Currywurst",
-        "instructions": "Wurst braten",
+        "instructions": "Wurst braten, mit Paprikapulver und Curry bestreuen, in Ketchup ersäufen und an in tiefem Fett ausgebackenen Kartoffestiften servieren.",
         "ingredients": ["Wurst", "Curry", "Ketchup"]
     },
     {
@@ -50,7 +50,7 @@
     {
         "id": "08",
         "meal": "Banana Pancakes",
-        "instructions": "Pfannekuchen backen",
+        "instructions": "Eier Mehl und Sosenmilch verquirlen, mit einer Gabel Bananen zerrdrücken und den ganzen Kram in der Pfanne kross aufbraten, Diggi",
         "ingredients": ["Bananen", "Eier", "Mehl"]
     },
     {
