@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import slate from '../assets/slate.jpg'
 
 export default function Button({ day, meal, onClick, id }) {

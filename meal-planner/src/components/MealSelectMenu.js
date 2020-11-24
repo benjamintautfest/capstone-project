@@ -1,24 +1,43 @@
 import styled from 'styled-components/macro'
-import { v4 as uuidv4 } from 'uuid'
+import meals from '../data/recipeData.json'
 
-export default function MealSelectMenu({ weekdayId, handleMealClick }) {
-    const meals = [
-        { meal: 'Käsestulle', id: uuidv4() },
-        { meal: 'Kartoffelsalat', id: uuidv4() },
-        { meal: 'Gemüselasagne', id: uuidv4() },
-        { meal: 'Steinpilzrisotto', id: uuidv4() },
-        { meal: 'Currywurst', id: uuidv4() },
-        { meal: 'Linsensuppe', id: uuidv4() },
-        { meal: 'Tofufrikassee', id: uuidv4() },
-        { meal: 'Banana Pancakes', id: uuidv4() },
-        { meal: 'Thai Gemüsecurry', id: uuidv4() },
-    ]
-
+export default function MealSelectMenu({
+    weekdayId,
+    handleMealClick,
+    handleRecipeClick,
+}) {
     return (
         <ListStyled>
-            {meals.map(({ meal, id }) => (
-                <li key={id} onClick={() => handleMealClick(meal, weekdayId)}>
+            {meals.map(({ meal, id, ingredients, instructions, image }) => (
+                <li key={id}>
                     {meal}
+                    <div>
+                        <button
+                            onClick={() =>
+                                handleMealClick(
+                                    meal,
+                                    weekdayId,
+                                    ingredients,
+                                    instructions,
+                                    image
+                                )
+                            }
+                        >
+                            übernehmen
+                        </button>
+                        <button
+                            onClick={() =>
+                                handleRecipeClick(
+                                    meal,
+                                    ingredients,
+                                    instructions,
+                                    image
+                                )
+                            }
+                        >
+                            Rezept
+                        </button>
+                    </div>
                 </li>
             ))}
         </ListStyled>
@@ -30,6 +49,20 @@ const ListStyled = styled.ul`
     height: 100px;
     list-style: none;
     overflow: auto;
+    scrollbar-width: none;
+
+    div {
+        display: flex;
+        justify-content: space-space-around;
+    }
+
+    button {
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin: 0 4px;
+        background: ivory;
+    }
 
     li {
         display: grid;
@@ -40,5 +73,6 @@ const ListStyled = styled.ul`
         padding: 0 30px;
         font-size: 0.8em;
         border-radius: 5px;
+        line-height: 1.3em;
     }
 `
