@@ -4,7 +4,7 @@ const mealPlan = [
     {
         weekday: 'Montag',
         id: uuidv4(),
-        meal: '',
+        title: '',
         instructions: '',
         ingredients: '',
         image: '',
@@ -12,7 +12,7 @@ const mealPlan = [
     {
         weekday: 'Dienstag',
         id: uuidv4(),
-        meal: '',
+        title: '',
         instructions: '',
         ingredients: '',
         image: '',
@@ -20,7 +20,7 @@ const mealPlan = [
     {
         weekday: 'Mittwoch',
         id: uuidv4(),
-        meal: '',
+        title: '',
         instructions: '',
         ingredients: '',
         image: '',
@@ -28,7 +28,7 @@ const mealPlan = [
     {
         weekday: 'Donnerstag',
         id: uuidv4(),
-        meal: '',
+        title: '',
         instructions: '',
         ingredients: '',
         image: '',
@@ -36,7 +36,7 @@ const mealPlan = [
     {
         weekday: 'Freitag',
         id: uuidv4(),
-        meal: '',
+        title: '',
         instructions: '',
         ingredients: '',
         image: '',
@@ -44,7 +44,7 @@ const mealPlan = [
     {
         weekday: 'Samstag',
         id: uuidv4(),
-        meal: '',
+        title: '',
         instructions: '',
         ingredients: '',
         image: '',
@@ -52,7 +52,7 @@ const mealPlan = [
     {
         weekday: 'Sonntag',
         id: uuidv4(),
-        meal: '',
+        title: '',
         instructions: '',
         ingredients: '',
         image: '',

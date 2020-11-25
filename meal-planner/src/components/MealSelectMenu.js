@@ -50,6 +50,9 @@ const ListStyled = styled.ul`
     list-style: none;
     overflow: auto;
     scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     div {
         display: flex;

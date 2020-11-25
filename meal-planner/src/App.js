@@ -1,60 +1,22 @@
-import { useState, useEffect } from 'react'
 import styled from 'styled-components/macro'
 import woodBackground from './assets/wood_background.jpg'
 import logo from './assets/logo.svg'
 import Button from './components/Button'
 import MealSelectMenu from './components/MealSelectMenu'
 import RecipePage from './components/RecipePage'
-import mealPlan from './data/MealPlan'
-import saveLocally from './lib/saveLocally'
-import loadlocally from './lib/loadLocally'
+import useRecipe from './hooks/useRecipe'
 
 export default function App() {
-    const [weekdays, setWeekdays] = useState([])
-    const [selectedWeekday, setSelectedWeekday] = useState('')
-    const [showRecipe, setShowRecipe] = useState(false)
-
-    const [selectedMeal, setSelectedMeal] = useState({
-        title: '',
-        instructions: '',
-        ingredients: '',
-        image: '',
-    })
-
-    useEffect(() => {
-        setWeekdays(loadlocally('weekdays') ?? mealPlan)
-    }, [])
-
-    function handleClick(event) {
-        setSelectedWeekday(event.currentTarget.id)
-    }
-
-    function selectMeal(meal, id, instructions, ingredients, image) {
-        setSelectedWeekday('')
-        const updatedWeekdays = weekdays.map((weekday) =>
-            weekday.id === id
-                ? { ...weekday, meal, ingredients, instructions, image }
-                : weekday
-        )
-        setWeekdays(updatedWeekdays)
-        console.log(updatedWeekdays)
-        console.log(meal)
-        saveLocally('weekdays', updatedWeekdays)
-    }
-
-    function handleShowRecipe(meal, ingredients, instructions, image) {
-        setShowRecipe(true)
-        setSelectedMeal({
-            title: meal,
-            ingredients,
-            instructions,
-            image,
-        })
-    }
-
-    function handleCloseRecipe() {
-        setShowRecipe(false)
-    }
+    const {
+        weekdays,
+        selectedWeekday,
+        showRecipe,
+        selectedMeal,
+        handleClick,
+        handleCloseRecipe,
+        handleShowRecipe,
+        selectMeal,
+    } = useRecipe()
 
     return (
         <AppStyled>
@@ -128,6 +90,9 @@ const AppStyled = styled.div`
         padding-top: 10px;
         scrollbar-width: none;
         z-index: 9999;
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     footer {
