@@ -1,73 +1,16 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styled from 'styled-components/macro'
 import woodBackground from './assets/wood_background.jpg'
 import logo from './assets/logo.svg'
 import Button from './components/Button'
 import MealSelectMenu from './components/MealSelectMenu'
 import RecipePage from './components/RecipePage'
-import { v4 as uuidv4 } from 'uuid'
+import mealPlan from './data/MealPlan'
+import saveLocally from './lib/saveLocally'
+import loadlocally from './lib/loadLocally'
 
 export default function App() {
-    const mealPlan = [
-        {
-            weekday: 'Montag',
-            id: uuidv4(),
-            meal: '',
-            instructions: '',
-            ingredients: '',
-            image: '',
-        },
-        {
-            weekday: 'Dienstag',
-            id: uuidv4(),
-            meal: '',
-            instructions: '',
-            ingredients: '',
-            image: '',
-        },
-        {
-            weekday: 'Mittwoch',
-            id: uuidv4(),
-            meal: '',
-            instructions: '',
-            ingredients: '',
-            image: '',
-        },
-        {
-            weekday: 'Donnerstag',
-            id: uuidv4(),
-            meal: '',
-            instructions: '',
-            ingredients: '',
-            image: '',
-        },
-        {
-            weekday: 'Freitag',
-            id: uuidv4(),
-            meal: '',
-            instructions: '',
-            ingredients: '',
-            image: '',
-        },
-        {
-            weekday: 'Samstag',
-            id: uuidv4(),
-            meal: '',
-            instructions: '',
-            ingredients: '',
-            image: '',
-        },
-        {
-            weekday: 'Sonntag',
-            id: uuidv4(),
-            meal: '',
-            instructions: '',
-            ingredients: '',
-            image: '',
-        },
-    ]
-
-    const [weekdays, setWeekdays] = useState(mealPlan)
+    const [weekdays, setWeekdays] = useState([])
     const [selectedWeekday, setSelectedWeekday] = useState('')
     const [showRecipe, setShowRecipe] = useState(false)
 
@@ -77,6 +20,10 @@ export default function App() {
         ingredients: '',
         image: '',
     })
+
+    useEffect(() => {
+        setWeekdays(loadlocally('weekdays') ?? mealPlan)
+    }, [])
 
     function handleClick(event) {
         setSelectedWeekday(event.currentTarget.id)
@@ -90,6 +37,9 @@ export default function App() {
                 : weekday
         )
         setWeekdays(updatedWeekdays)
+        console.log(updatedWeekdays)
+        console.log(meal)
+        saveLocally('weekdays', updatedWeekdays)
     }
 
     function handleShowRecipe(meal, ingredients, instructions, image) {
@@ -123,23 +73,24 @@ export default function App() {
                 ) : (
                     ''
                 )}
-                {weekdays.map(({ weekday, id, meal }) => (
-                    <div key={id}>
-                        <Button
-                            day={weekday}
-                            id={weekday}
-                            meal={meal}
-                            onClick={handleClick}
-                        />
-                        {selectedWeekday === weekday && (
-                            <MealSelectMenu
-                                handleMealClick={selectMeal}
-                                weekdayId={id}
-                                handleRecipeClick={handleShowRecipe}
+                {weekdays.length > 0 &&
+                    weekdays.map(({ weekday, id, meal }) => (
+                        <div key={id}>
+                            <Button
+                                day={weekday}
+                                id={weekday}
+                                meal={meal}
+                                onClick={handleClick}
                             />
-                        )}
-                    </div>
-                ))}
+                            {selectedWeekday === weekday && (
+                                <MealSelectMenu
+                                    handleMealClick={selectMeal}
+                                    weekdayId={id}
+                                    handleRecipeClick={handleShowRecipe}
+                                />
+                            )}
+                        </div>
+                    ))}
             </section>
             <footer></footer>
         </AppStyled>
@@ -152,6 +103,7 @@ const AppStyled = styled.div`
     font-family: sans-serif;
     text-align: center;
     background: url(${woodBackground});
+    background-color: #2e2d2d;
     background-size: cover;
     height: 100vh;
     max-width: 600px;
