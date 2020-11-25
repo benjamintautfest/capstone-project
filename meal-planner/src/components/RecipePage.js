@@ -46,7 +46,7 @@ const SectionStyled = styled.section`
     span {
         position: absolute;
         right: 10px;
-        top: 5px;
+        top: 0;
         font-size: 1.5em;
         color: white;
         padding: 5px;
