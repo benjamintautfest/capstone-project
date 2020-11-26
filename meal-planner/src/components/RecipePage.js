@@ -25,7 +25,7 @@ export default function RecipePage({
 }
 
 const SectionStyled = styled.section`
-    background: #800000;
+    background: #800000ee;
     position: absolute;
     top: 0;
     height: 100%;

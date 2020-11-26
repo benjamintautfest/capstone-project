@@ -54,7 +54,7 @@ export default function App() {
                         </div>
                     ))}
             </section>
-            <footer></footer>
+            <footer>&copy; take seven 2020</footer>
         </AppStyled>
     )
 }
@@ -98,5 +98,7 @@ const AppStyled = styled.div`
         background: transparent;
         box-shadow: -10px 0 30px #b16c16;
         z-index: 0;
+        display: grid;
+        place-items: center;
     }
 `
