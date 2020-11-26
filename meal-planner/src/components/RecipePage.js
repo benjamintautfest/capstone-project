@@ -73,7 +73,7 @@ const SectionStyled = styled.section`
     img {
         margin-bottom: 10px;
         display: box;
-        margin-left: 30px;
+        margin: 30px auto;
         filter: drop-shadow(0px 0px 10px #5d1821);
     }
 `

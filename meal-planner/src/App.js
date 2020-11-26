@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 import woodBackground from './assets/wood_background_knife.jpg'
-import logo from './assets/logo.svg'
+import logo from './assets/logo_2.svg'
 import Button from './components/Button'
 import MealSelectMenu from './components/MealSelectMenu'
 import RecipePage from './components/RecipePage'
@@ -21,8 +21,7 @@ export default function App() {
     return (
         <AppStyled>
             <header>
-                {/*                 <img src={logo} alt="" />
-                 */}{' '}
+                <img src={logo} alt="" />
             </header>
             <section>
                 {showRecipe ? (
@@ -82,8 +81,7 @@ const AppStyled = styled.div`
 
     img {
         width: 130px;
-        margin-top: 80px;
-        margin-left: 50px;
+        margin: 30px auto 10px;
     }
 
     section {
