@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
-import woodBackground from './assets/wood_background_knife.jpg'
-import logo from './assets/logo_2.svg'
+import woodBackground from './assets/wood_background.jpg'
+import logo from './assets/logo.svg'
 import Button from './components/Button'
 import MealSelectMenu from './components/MealSelectMenu'
 import RecipePage from './components/RecipePage'
@@ -35,7 +35,7 @@ export default function App() {
                 ) : (
                     ''
                 )}
-                {weekdays.length > 0 &&
+                {weekdays &&
                     weekdays.map(({ weekday, id, meal }) => (
                         <div key={id}>
                             <Button
