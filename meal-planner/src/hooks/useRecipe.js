@@ -4,7 +4,9 @@ import loadLocally from '../lib/loadLocally'
 import saveLocally from '../lib/saveLocally'
 
 export default function useRecipe() {
-    const [weekdays, setWeekdays] = useState([])
+    const [weekdays, setWeekdays] = useState(
+        loadLocally('weekdays') ?? mealPlan
+    )
     const [selectedWeekday, setSelectedWeekday] = useState('')
     const [showRecipe, setShowRecipe] = useState(false)
 
@@ -14,10 +16,6 @@ export default function useRecipe() {
         ingredients: '',
         image: '',
     })
-
-    useEffect(() => {
-        setWeekdays(loadLocally('weekdays') ?? mealPlan)
-    }, [])
 
     function handleClick(event) {
         setSelectedWeekday(event.currentTarget.id)

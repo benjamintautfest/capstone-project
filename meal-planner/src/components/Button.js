@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro'
 import slate from '../assets/slate.jpg'
 
-export default function Button({ day, meal, onClick, id, onRecipeClick }) {
+export default function Button({ day, meal, onClick, id }) {
     meal = meal ? meal : 'Auswählen'
     return (
         <ButtonStyled id={id} onClick={onClick}>
