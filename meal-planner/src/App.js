@@ -73,6 +73,7 @@ const AppStyled = styled.div`
     header {
         box-shadow: 10px 0 30px #b16c16;
         padding-bottom: 30px;
+        position: sticky;
     }
 
     h1 {
@@ -95,10 +96,10 @@ const AppStyled = styled.div`
     }
 
     footer {
-        background: transparent;
         box-shadow: -10px 0 30px #b16c16;
         z-index: 0;
         display: grid;
         place-items: center;
+        color: white;
     }
 `
