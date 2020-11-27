@@ -1,110 +1,22 @@
-import { useState } from 'react'
 import styled from 'styled-components/macro'
-import woodBackground from './assets/wood_background.jpg'
-import logo from './assets/logo.svg'
+import woodBackground from './assets/wood_background_knife.jpg'
+import logo from './assets/logo_2.svg'
 import Button from './components/Button'
 import MealSelectMenu from './components/MealSelectMenu'
 import RecipePage from './components/RecipePage'
-import { v4 as uuidv4 } from 'uuid'
+import useRecipe from './hooks/useRecipe'
 
 export default function App() {
-    const mealPlan = [
-        {
-            weekday: 'Montag',
-            id: uuidv4(),
-            meal: '',
-            instructions: '',
-            ingredients: '',
-            image: '',
-        },
-        {
-            weekday: 'Dienstag',
-            id: uuidv4(),
-            meal: '',
-            instructions: '',
-            ingredients: '',
-            image: '',
-        },
-        {
-            weekday: 'Mittwoch',
-            id: uuidv4(),
-            meal: '',
-            instructions: '',
-            ingredients: '',
-            image: '',
-        },
-        {
-            weekday: 'Donnerstag',
-            id: uuidv4(),
-            meal: '',
-            instructions: '',
-            ingredients: '',
-            image: '',
-        },
-        {
-            weekday: 'Freitag',
-            id: uuidv4(),
-            meal: '',
-            instructions: '',
-            ingredients: '',
-            image: '',
-        },
-        {
-            weekday: 'Samstag',
-            id: uuidv4(),
-            meal: '',
-            instructions: '',
-            ingredients: '',
-            image: '',
-        },
-        {
-            weekday: 'Sonntag',
-            id: uuidv4(),
-            meal: '',
-            instructions: '',
-            ingredients: '',
-            image: '',
-        },
-    ]
-
-    const [weekdays, setWeekdays] = useState(mealPlan)
-    const [selectedWeekday, setSelectedWeekday] = useState('')
-    const [showRecipe, setShowRecipe] = useState(false)
-
-    const [selectedMeal, setSelectedMeal] = useState({
-        title: '',
-        instructions: '',
-        ingredients: '',
-        image: '',
-    })
-
-    function handleClick(event) {
-        setSelectedWeekday(event.currentTarget.id)
-    }
-
-    function selectMeal(meal, id, instructions, ingredients, image) {
-        setSelectedWeekday('')
-        const updatedWeekdays = weekdays.map((weekday) =>
-            weekday.id === id
-                ? { ...weekday, meal, ingredients, instructions, image }
-                : weekday
-        )
-        setWeekdays(updatedWeekdays)
-    }
-
-    function handleShowRecipe(meal, ingredients, instructions, image) {
-        setShowRecipe(true)
-        setSelectedMeal({
-            title: meal,
-            ingredients,
-            instructions,
-            image,
-        })
-    }
-
-    function handleCloseRecipe() {
-        setShowRecipe(false)
-    }
+    const {
+        weekdays,
+        selectedWeekday,
+        showRecipe,
+        selectedMeal,
+        handleClick,
+        handleCloseRecipe,
+        handleShowRecipe,
+        selectMeal,
+    } = useRecipe()
 
     return (
         <AppStyled>
@@ -123,25 +35,26 @@ export default function App() {
                 ) : (
                     ''
                 )}
-                {weekdays.map(({ weekday, id, meal }) => (
-                    <div key={id}>
-                        <Button
-                            day={weekday}
-                            id={weekday}
-                            meal={meal}
-                            onClick={handleClick}
-                        />
-                        {selectedWeekday === weekday && (
-                            <MealSelectMenu
-                                handleMealClick={selectMeal}
-                                weekdayId={id}
-                                handleRecipeClick={handleShowRecipe}
+                {weekdays.length > 0 &&
+                    weekdays.map(({ weekday, id, meal }) => (
+                        <div key={id}>
+                            <Button
+                                day={weekday}
+                                id={weekday}
+                                meal={meal}
+                                onClick={handleClick}
                             />
-                        )}
-                    </div>
-                ))}
+                            {selectedWeekday === weekday && (
+                                <MealSelectMenu
+                                    handleMealClick={selectMeal}
+                                    weekdayId={id}
+                                    handleRecipeClick={handleShowRecipe}
+                                />
+                            )}
+                        </div>
+                    ))}
             </section>
-            <footer></footer>
+            <footer>&copy; take seven 2020</footer>
         </AppStyled>
     )
 }
@@ -152,6 +65,7 @@ const AppStyled = styled.div`
     font-family: sans-serif;
     text-align: center;
     background: url(${woodBackground});
+    background-color: #2e2d2d;
     background-size: cover;
     height: 100vh;
     max-width: 600px;
@@ -166,9 +80,8 @@ const AppStyled = styled.div`
     }
 
     img {
-        width: 170px;
-        margin-top: 30px;
-        margin-right: 30px;
+        width: 130px;
+        margin: 30px auto 10px;
     }
 
     section {
@@ -176,11 +89,16 @@ const AppStyled = styled.div`
         padding-top: 10px;
         scrollbar-width: none;
         z-index: 9999;
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     footer {
         background: transparent;
         box-shadow: -10px 0 30px #b16c16;
         z-index: 0;
+        display: grid;
+        place-items: center;
     }
 `

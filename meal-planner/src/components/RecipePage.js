@@ -25,7 +25,7 @@ export default function RecipePage({
 }
 
 const SectionStyled = styled.section`
-    background: #800000;
+    background: #800000ee;
     position: absolute;
     top: 0;
     height: 100%;
@@ -46,7 +46,7 @@ const SectionStyled = styled.section`
     span {
         position: absolute;
         right: 10px;
-        top: 5px;
+        top: 0;
         font-size: 1.5em;
         color: white;
         padding: 5px;
@@ -73,7 +73,7 @@ const SectionStyled = styled.section`
     img {
         margin-bottom: 10px;
         display: box;
-        margin-left: 30px;
+        margin: 30px auto;
         filter: drop-shadow(0px 0px 10px #5d1821);
     }
 `

@@ -13,6 +13,7 @@ html {
 body {
     margin: 0 auto;
     max-width: 600px;
+    background: #b16c16;
     
 }
 
