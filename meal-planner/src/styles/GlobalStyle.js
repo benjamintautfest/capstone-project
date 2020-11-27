@@ -17,6 +17,10 @@ body {
     
 }
 
+h1 {
+    font-family: 'Sansita Swashed', cursive;
+}
+
 
 
 

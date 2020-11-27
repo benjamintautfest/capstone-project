@@ -1,10 +1,14 @@
 import styled from 'styled-components/macro'
 import woodBackground from './assets/wood_background.jpg'
 import logo from './assets/logo.svg'
+import shoppingCart from './assets/shopping_cart.svg'
+import home from './assets/home.svg'
 import Button from './components/Button'
 import MealSelectMenu from './components/MealSelectMenu'
 import RecipePage from './components/RecipePage'
 import useRecipe from './hooks/useRecipe'
+import { Switch, Route, Link } from 'react-router-dom'
+import ShoppingList from './components/ShoppingList'
 
 export default function App() {
     const {
@@ -23,38 +27,52 @@ export default function App() {
             <header>
                 <img src={logo} alt="" />
             </header>
-            <section>
-                {showRecipe ? (
-                    <RecipePage
-                        closeRecipe={handleCloseRecipe}
-                        title={selectedMeal.title}
-                        image={selectedMeal.image}
-                        ingredients={selectedMeal.ingredients}
-                        instructions={selectedMeal.instructions}
-                    />
-                ) : (
-                    ''
-                )}
-                {weekdays &&
-                    weekdays.map(({ weekday, id, meal }) => (
-                        <div key={id}>
-                            <Button
-                                day={weekday}
-                                id={weekday}
-                                meal={meal}
-                                onClick={handleClick}
+            <Switch>
+                <Route path="/" exact>
+                    <section>
+                        {showRecipe ? (
+                            <RecipePage
+                                closeRecipe={handleCloseRecipe}
+                                title={selectedMeal.title}
+                                image={selectedMeal.image}
+                                ingredients={selectedMeal.ingredients}
+                                instructions={selectedMeal.instructions}
                             />
-                            {selectedWeekday === weekday && (
-                                <MealSelectMenu
-                                    handleMealClick={selectMeal}
-                                    weekdayId={id}
-                                    handleRecipeClick={handleShowRecipe}
-                                />
-                            )}
-                        </div>
-                    ))}
-            </section>
-            <footer>&copy; take seven 2020</footer>
+                        ) : (
+                            ''
+                        )}
+                        {weekdays &&
+                            weekdays.map(({ weekday, id, meal }) => (
+                                <div key={id}>
+                                    <Button
+                                        day={weekday}
+                                        id={weekday}
+                                        meal={meal}
+                                        onClick={handleClick}
+                                    />
+                                    {selectedWeekday === weekday && (
+                                        <MealSelectMenu
+                                            handleMealClick={selectMeal}
+                                            weekdayId={id}
+                                            handleRecipeClick={handleShowRecipe}
+                                        />
+                                    )}
+                                </div>
+                            ))}
+                    </section>
+                </Route>
+                <Route component={ShoppingList} />
+            </Switch>
+            <footer>
+                <div>
+                    <Link to="/">
+                        <img src={home} alt="" />
+                    </Link>
+                    <Link to="./shopping-list">
+                        <img src={shoppingCart} alt="" />
+                    </Link>
+                </div>
+            </footer>
         </AppStyled>
     )
 }
@@ -73,7 +91,6 @@ const AppStyled = styled.div`
     header {
         box-shadow: 10px 0 30px #b16c16;
         padding-bottom: 30px;
-        position: sticky;
     }
 
     h1 {
@@ -95,11 +112,31 @@ const AppStyled = styled.div`
         }
     }
 
+    a {
+        text-decoration: none;
+    }
+
     footer {
         box-shadow: -10px 0 30px #b16c16;
         z-index: 0;
         display: grid;
         place-items: center;
         color: white;
+        background: white;
+
+        div {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            height: 48px;
+            justify-content: space-around;
+            width: 70%;
+
+            img {
+                width: 25px;
+                position: relative;
+                bottom: 10px;
+            }
+        }
     }
 `
