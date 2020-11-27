@@ -126,6 +126,7 @@ const AppStyled = styled.div`
         place-items: center;
         color: white;
         background: white;
+        position: sticky;
 
         div {
             display: flex;

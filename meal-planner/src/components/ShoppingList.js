@@ -9,6 +9,8 @@ export default function ShoppingList() {
         { id: '4', title: '1 Baguette' },
         { id: '5', title: '1 Packung Spaghetti' },
         { id: '6', title: '1 Netz Mandarinen' },
+        { id: '7', title: '1 Dose Tomaten' },
+        { id: '8', title: '1 Stange Lauch' },
     ]
     return (
         <DivStyled>
@@ -27,6 +29,12 @@ export default function ShoppingList() {
 }
 
 const DivStyled = styled.div`
+    overflow: auto;
+    scrollbar-width: none;
+    z-index: 9999;
+    &::-webkit-scrollbar {
+        display: none;
+    }
     ul {
         text-align: left;
         font-family: 'Sansita Swashed', cursive;
