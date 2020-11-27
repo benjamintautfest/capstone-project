@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro'
+import { useState } from 'react'
 import woodBackground from './assets/wood_background.jpg'
 import logo from './assets/logo.svg'
 import shoppingCart from './assets/shopping_cart.svg'
@@ -61,14 +62,16 @@ export default function App() {
                             ))}
                     </section>
                 </Route>
-                <Route component={ShoppingList} />
+                <Route path="/shopping-list" component={ShoppingList}>
+                    <ShoppingList />
+                </Route>
             </Switch>
             <footer>
                 <div>
                     <Link to="/">
                         <img src={home} alt="" />
                     </Link>
-                    <Link to="./shopping-list">
+                    <Link to="/shopping-list">
                         <img src={shoppingCart} alt="" />
                     </Link>
                 </div>

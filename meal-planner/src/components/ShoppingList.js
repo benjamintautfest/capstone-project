@@ -1,26 +1,26 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import mealplan from '../data/MealPlan.js'
 
 export default function ShoppingList() {
+    const shoppingItems = [
+        { id: '1', title: '1 Dose Tomaten' },
+        { id: '2', title: '1 Stange Lauch' },
+        { id: '3', title: '1 Packung Nudeln' },
+        { id: '4', title: '1 Baguette' },
+        { id: '5', title: '1 Packung Spaghetti' },
+        { id: '6', title: '1 Netz Mandarinen' },
+    ]
     return (
         <DivStyled>
             <h1>Einkaufsliste</h1>
             <ul>
-                <li>
-                    1 Dose Tomaten
-                    <input id="1" type="checkbox" />
-                    <label for="1"></label>
-                </li>
-                <li>
-                    1 Stange Lauch
-                    <input id="2" type="checkbox" />
-                    <label for="2"></label>
-                </li>
-                <li>
-                    1 Packung Nudeln
-                    <input id="3" type="checkbox" />
-                    <label for="3"></label>
-                </li>
+                {shoppingItems.map(({ title, id }) => (
+                    <li key={id}>
+                        {title}
+                        <input id={id} type="checkbox" />
+                        <label htmlFor={id}></label>
+                    </li>
+                ))}
             </ul>
         </DivStyled>
     )
@@ -47,22 +47,23 @@ const DivStyled = styled.div`
     }
 
     input[type='checkbox'] + label::before {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
+        padding: 6px;
         color: white;
-        border: 1px solid white;
+        border: 2px solid papayawhip;
+        position: relative;
         content: '';
         display: grid;
-        place-items: center;
-        border-radius: 50%;
-        position: relative;
-        top: 8px;
         line-height: 0;
+        place-items: center;
+        top: 4px;
+        border-radius: 3px;
+        transform: scale(0.75);
     }
 
     input[type='checkbox']:checked + label::before {
         background-color: transparent;
         content: '✔️';
-        border: none;
     }
 `
