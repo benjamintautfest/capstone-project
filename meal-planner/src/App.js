@@ -1,23 +1,13 @@
 import styled from 'styled-components/macro'
 import woodBackground from './assets/wood_background.jpg'
 import MainPage from './components/MainPage'
-import { Switch, Route, Link } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import ShoppingList from './components/ShoppingList'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import shoppingItems from './data/testShoppingItems'
 
 export default function App() {
-    const shoppingItems = [
-        { id: '1', ingredient: '1 Dose Tomaten' },
-        { id: '2', ingredient: '1 Stange Lauch' },
-        { id: '3', ingredient: '1 Packung Nudeln' },
-        { id: '4', ingredient: '1 Baguette' },
-        { id: '5', ingredient: '1 Packung Spaghetti' },
-        { id: '6', ingredient: '1 Netz Mandarinen' },
-        { id: '7', ingredient: '1 Dose Tomaten' },
-        { id: '8', ingredient: '1 Stange Wasser' },
-    ]
-
     return (
         <AppStyled>
             <Header />
@@ -44,16 +34,6 @@ const AppStyled = styled.div`
     background-size: cover;
     height: 100vh;
     max-width: 600px;
-
-    header {
-        box-shadow: 10px 0 30px #b16c16;
-        padding-bottom: 30px;
-        position: sticky;
-    }
-
-    h1 {
-        color: white;
-    }
 
     img {
         width: 130px;
