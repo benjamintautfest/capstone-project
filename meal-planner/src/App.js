@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom'
 import ShoppingList from './components/ShoppingList'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import shoppingItems from './data/testShoppingItems'
+import shoppingItems from './data/recipeData.json'
 
 export default function App() {
     return (

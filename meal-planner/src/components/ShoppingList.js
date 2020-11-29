@@ -10,13 +10,15 @@ export default function ShoppingList({ recipes }) {
         <DivStyled>
             <h1>Einkaufsliste</h1>
             <ul>
-                {recipes.map(({ ingredient, id }) => (
-                    <li key={id}>
-                        {ingredient.map((item) => item)}
-                        <input id={id} type="checkbox" />
-                        <label htmlFor={id}></label>
-                    </li>
-                ))}
+                {recipes.map(({ ingredients, id }) =>
+                    ingredients.map((item, index) => (
+                        <li key={index}>
+                            {item}
+                            <input id={item} type="checkbox" />
+                            <label htmlFor={item}></label>
+                        </li>
+                    ))
+                )}
             </ul>
         </DivStyled>
     )
@@ -29,6 +31,11 @@ const DivStyled = styled.div`
     &::-webkit-scrollbar {
         display: none;
     }
+
+    h1 {
+        color: maroon;
+    }
+
     ul {
         text-align: left;
         font-family: 'Sansita Swashed', cursive;
@@ -42,6 +49,7 @@ const DivStyled = styled.div`
         display: flex;
         justify-content: space-between;
         border-bottom: 1px dotted black;
+        font-size: 0.9em;
     }
 
     input[type='checkbox'] {
