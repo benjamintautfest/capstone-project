@@ -1,11 +1,11 @@
-import logo from './assets/logo.svg'
 import styled from 'styled-components/macro'
 import woodBackground from './assets/wood_background.jpg'
-
 import MainPage from './components/MainPage'
 import { Switch, Route, Link } from 'react-router-dom'
 import ShoppingList from './components/ShoppingList'
+import Header from './components/Header'
 import Footer from './components/Footer'
+
 export default function App() {
     const shoppingItems = [
         { id: '1', ingredient: '1 Dose Tomaten' },
@@ -20,9 +20,7 @@ export default function App() {
 
     return (
         <AppStyled>
-            <header>
-                <img src={logo} alt="" />
-            </header>
+            <Header />
             <Switch>
                 <Route path="/" exact>
                     <MainPage />
