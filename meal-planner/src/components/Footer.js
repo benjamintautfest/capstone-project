@@ -15,7 +15,9 @@ export default function Footer() {
                         src={shoppingCart}
                         alt=""
                         onClick={() => {
-                            console.log('hallo')
+                            console.log(
+                                'load the god damn ingredients to the shopping list'
+                            )
                         }}
                     />
                 </Link>
@@ -25,6 +27,7 @@ export default function Footer() {
 }
 
 const FooterStyled = styled.footer`
+    position: relative;
     box-shadow: -10px 0 30px #b16c16;
     z-index: 0;
     display: grid;
@@ -44,6 +47,7 @@ const FooterStyled = styled.footer`
             width: 25px;
             position: relative;
             bottom: 10px;
+            outline: 0;
         }
     }
 `

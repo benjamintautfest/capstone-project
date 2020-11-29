@@ -6,7 +6,7 @@ Button.propTypes = {
     day: PropTypes.string.isRequired,
     meal: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
 }
 
 export default function Button({ day, meal, onClick, id }) {

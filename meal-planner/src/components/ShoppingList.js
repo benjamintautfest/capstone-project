@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 ShoppingList.propTypes = {
-    recipes: PropTypes.string.isRequired,
+    recipes: PropTypes.array.isRequired,
 }
 
 export default function ShoppingList({ recipes }) {

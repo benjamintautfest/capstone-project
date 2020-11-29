@@ -15,7 +15,7 @@ export default function App() {
                 <Route path="/" exact>
                     <MainPage />
                 </Route>
-                <Route path="/shopping-list" component={ShoppingList}>
+                <Route path="/shopping-list">
                     <ShoppingList recipes={shoppingItems} />
                 </Route>
             </Switch>

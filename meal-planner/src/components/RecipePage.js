@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 
 RecipePage.propTypes = {
     closeRecipe: PropTypes.func.isRequired,
-    id: PropTypes.number.isRequired,
+    id: PropTypes.number,
     title: PropTypes.string.isRequired,
     image: PropTypes.any.isRequired,
-    ingredients: PropTypes.string.isRequired,
+    ingredients: PropTypes.array.isRequired,
     instructions: PropTypes.string.isRequired,
 }
 
@@ -35,6 +35,7 @@ export default function RecipePage({
 
 const SectionStyled = styled.section`
     background: #800000fe;
+    max-width: 600px;
     position: absolute;
     top: 0;
     height: 100%;
@@ -42,6 +43,10 @@ const SectionStyled = styled.section`
     padding: 0 30px;
     width: 100%;
     scrollbar-width: none;
+    z-index: 9999;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     h2 {
         font-family: 'Sansita Swashed', cursive;
@@ -74,7 +79,6 @@ const SectionStyled = styled.section`
         color: ivory;
         padding: 15px;
         line-height: 1.5em;
-        color: ivory;
         border-bottom: ivory dotted 1px;
         border-top: ivory dotted 1px;
     }

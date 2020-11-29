@@ -51,10 +51,9 @@ export default function MainPage() {
 }
 
 const SectionStyled = styled.section`
-    overflow: auto;
+    overflow-y: auto;
     padding-top: 10px;
     scrollbar-width: none;
-    z-index: 9999;
     &::-webkit-scrollbar {
         display: none;
     }
