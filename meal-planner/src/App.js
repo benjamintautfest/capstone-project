@@ -1,16 +1,14 @@
 import styled from 'styled-components/macro'
 import woodBackground from './assets/wood_background.jpg'
 import logo from './assets/logo.svg'
-import shoppingCart from './assets/shopping_cart.svg'
-import home from './assets/home.svg'
+
 import Button from './components/Button'
 import MealSelectMenu from './components/MealSelectMenu'
 import RecipePage from './components/RecipePage'
 import useRecipe from './hooks/useRecipe'
 import { Switch, Route, Link } from 'react-router-dom'
 import ShoppingList from './components/ShoppingList'
-import meals from './data/recipeData.json'
-
+import Footer from './components/Footer'
 export default function App() {
     const {
         weekdays,
@@ -77,22 +75,7 @@ export default function App() {
                     <ShoppingList ingredients={shoppingItems} />
                 </Route>
             </Switch>
-            <footer>
-                <div>
-                    <Link to="/">
-                        <img src={home} alt="" />
-                    </Link>
-                    <Link to="/shopping-list">
-                        <img
-                            src={shoppingCart}
-                            alt=""
-                            onClick={() => {
-                                console.log('hallo')
-                            }}
-                        />
-                    </Link>
-                </div>
-            </footer>
+            <Footer />
         </AppStyled>
     )
 }
@@ -130,30 +113,6 @@ const AppStyled = styled.div`
         z-index: 9999;
         &::-webkit-scrollbar {
             display: none;
-        }
-    }
-
-    footer {
-        box-shadow: -10px 0 30px #b16c16;
-        z-index: 0;
-        display: grid;
-        place-items: center;
-        color: white;
-        background: white;
-
-        div {
-            display: flex;
-            align-items: center;
-            padding: 0;
-            height: 48px;
-            justify-content: space-around;
-            width: 70%;
-
-            img {
-                width: 25px;
-                position: relative;
-                bottom: 10px;
-            }
         }
     }
 `
