@@ -16,7 +16,7 @@ export default function App() {
                     <MainPage />
                 </Route>
                 <Route path="/shopping-list" component={ShoppingList}>
-                    <ShoppingList ingredients={shoppingItems} />
+                    <ShoppingList recipes={shoppingItems} />
                 </Route>
             </Switch>
             <Footer />

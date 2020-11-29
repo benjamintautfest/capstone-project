@@ -2,17 +2,17 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 ShoppingList.propTypes = {
-    ingredients: PropTypes.string.isRequired,
+    recipes: PropTypes.string.isRequired,
 }
 
-export default function ShoppingList({ ingredients }) {
+export default function ShoppingList({ recipes }) {
     return (
         <DivStyled>
             <h1>Einkaufsliste</h1>
             <ul>
-                {ingredients.map(({ ingredient, id }) => (
+                {recipes.map(({ ingredient, id }) => (
                     <li key={id}>
-                        {ingredient}
+                        {ingredient.map((item) => item)}
                         <input id={id} type="checkbox" />
                         <label htmlFor={id}></label>
                     </li>
