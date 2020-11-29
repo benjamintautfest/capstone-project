@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import mealPlan from '../data/MealPlan'
 import loadLocally from '../lib/loadLocally'
 import saveLocally from '../lib/saveLocally'

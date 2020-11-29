@@ -1,24 +1,14 @@
 import styled from 'styled-components'
 import mealplan from '../data/MealPlan.js'
 
-export default function ShoppingList() {
-    const shoppingItems = [
-        { id: '1', title: '1 Dose Tomaten' },
-        { id: '2', title: '1 Stange Lauch' },
-        { id: '3', title: '1 Packung Nudeln' },
-        { id: '4', title: '1 Baguette' },
-        { id: '5', title: '1 Packung Spaghetti' },
-        { id: '6', title: '1 Netz Mandarinen' },
-        { id: '7', title: '1 Dose Tomaten' },
-        { id: '8', title: '1 Stange Lauch' },
-    ]
+export default function ShoppingList({ ingredients }) {
     return (
         <DivStyled>
             <h1>Einkaufsliste</h1>
             <ul>
-                {shoppingItems.map(({ title, id }) => (
+                {ingredients.map(({ ingredient, id }) => (
                     <li key={id}>
-                        {title}
+                        {ingredient}
                         <input id={id} type="checkbox" />
                         <label htmlFor={id}></label>
                     </li>
@@ -72,6 +62,6 @@ const DivStyled = styled.div`
 
     input[type='checkbox']:checked + label::before {
         background-color: transparent;
-        content: '✔️';
+        content: '🍅';
     }
 `
