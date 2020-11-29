@@ -1,8 +1,17 @@
 import styled from 'styled-components/macro'
+import PropTypes from 'prop-types'
+
+RecipePage.propTypes = {
+    closeRecipe: PropTypes.func.isRequired,
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    image: PropTypes.any.isRequired,
+    ingredients: PropTypes.string.isRequired,
+    instructions: PropTypes.string.isRequired,
+}
 
 export default function RecipePage({
     closeRecipe,
-    meals,
     id,
     title,
     image,

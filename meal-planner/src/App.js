@@ -1,26 +1,12 @@
+import logo from './assets/logo.svg'
 import styled from 'styled-components/macro'
 import woodBackground from './assets/wood_background.jpg'
-import logo from './assets/logo.svg'
 
-import Button from './components/Button'
-import MealSelectMenu from './components/MealSelectMenu'
-import RecipePage from './components/RecipePage'
-import useRecipe from './hooks/useRecipe'
+import MainPage from './components/MainPage'
 import { Switch, Route, Link } from 'react-router-dom'
 import ShoppingList from './components/ShoppingList'
 import Footer from './components/Footer'
 export default function App() {
-    const {
-        weekdays,
-        selectedWeekday,
-        showRecipe,
-        selectedMeal,
-        handleClick,
-        handleCloseRecipe,
-        handleShowRecipe,
-        selectMeal,
-    } = useRecipe()
-
     const shoppingItems = [
         { id: '1', ingredient: '1 Dose Tomaten' },
         { id: '2', ingredient: '1 Stange Lauch' },
@@ -39,37 +25,7 @@ export default function App() {
             </header>
             <Switch>
                 <Route path="/" exact>
-                    <section>
-                        {showRecipe ? (
-                            <RecipePage
-                                closeRecipe={handleCloseRecipe}
-                                title={selectedMeal.title}
-                                image={selectedMeal.image}
-                                ingredients={selectedMeal.ingredients}
-                                instructions={selectedMeal.instructions}
-                            />
-                        ) : (
-                            ''
-                        )}
-                        {weekdays &&
-                            weekdays.map(({ weekday, id, meal }) => (
-                                <div key={id}>
-                                    <Button
-                                        day={weekday}
-                                        id={weekday}
-                                        meal={meal}
-                                        onClick={handleClick}
-                                    />
-                                    {selectedWeekday === weekday && (
-                                        <MealSelectMenu
-                                            handleMealClick={selectMeal}
-                                            weekdayId={id}
-                                            handleRecipeClick={handleShowRecipe}
-                                        />
-                                    )}
-                                </div>
-                            ))}
-                    </section>
+                    <MainPage />
                 </Route>
                 <Route path="/shopping-list" component={ShoppingList}>
                     <ShoppingList ingredients={shoppingItems} />
@@ -94,6 +50,7 @@ const AppStyled = styled.div`
     header {
         box-shadow: 10px 0 30px #b16c16;
         padding-bottom: 30px;
+        position: sticky;
     }
 
     h1 {
@@ -103,7 +60,6 @@ const AppStyled = styled.div`
     img {
         width: 130px;
         margin: 30px auto 10px;
-        outline: 0;
     }
 
     section {

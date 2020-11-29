@@ -1,5 +1,13 @@
 import styled from 'styled-components/macro'
 import slate from '../assets/slate.jpg'
+import PropTypes from 'prop-types'
+
+Button.propTypes = {
+    day: PropTypes.string.isRequired,
+    meal: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
+    id: PropTypes.number.isRequired,
+}
 
 export default function Button({ day, meal, onClick, id }) {
     meal = meal ? meal : 'Auswählen'

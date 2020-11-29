@@ -1,5 +1,9 @@
 import styled from 'styled-components'
-import mealplan from '../data/MealPlan.js'
+import PropTypes from 'prop-types'
+
+ShoppingList.propTypes = {
+    ingredients: PropTypes.string.isRequired,
+}
 
 export default function ShoppingList({ ingredients }) {
     return (
