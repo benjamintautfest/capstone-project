@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 import shoppingCart from '../assets/shopping_cart.svg'
 import home from '../assets/home.svg'
@@ -28,8 +28,7 @@ export default function Footer() {
 
 const FooterStyled = styled.footer`
     position: relative;
-    box-shadow: -10px 0 30px #b16c16;
-    z-index: 0;
+    //z-index: 0;
     display: grid;
     place-items: center;
     color: white;

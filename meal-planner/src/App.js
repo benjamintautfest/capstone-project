@@ -34,6 +34,7 @@ const AppStyled = styled.div`
     background-size: cover;
     height: 100vh;
     max-width: 600px;
+    scrollbar-width: none;
 
     img {
         width: 130px;
@@ -44,7 +45,6 @@ const AppStyled = styled.div`
         overflow: auto;
         padding-top: 10px;
         scrollbar-width: none;
-        z-index: 9999;
         &::-webkit-scrollbar {
             display: none;
         }

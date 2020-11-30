@@ -11,9 +11,9 @@ export default function Header() {
 
 const HeaderStyled = styled.header`
     position: relative;
-    box-shadow: 10px 0 30px #b16c16;
+    box-shadow: 10px 0 10px #965a0f;
     padding-bottom: 30px;
-    z-index: 0;
+    //z-index: 0;
 
     h1 {
         color: white;

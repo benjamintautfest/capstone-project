@@ -15,6 +15,7 @@ export default function MainPage() {
         handleShowRecipe,
         selectMeal,
     } = useRecipe()
+
     return (
         <SectionStyled>
             {showRecipe ? (

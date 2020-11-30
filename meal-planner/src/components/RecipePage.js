@@ -39,14 +39,14 @@ const SectionStyled = styled.section`
     position: absolute;
     top: 0;
     height: 100%;
-    display: block;
+    //display: block;
     padding: 0 30px;
     width: 100%;
     scrollbar-width: none;
-    z-index: 9999;
     &::-webkit-scrollbar {
         display: none;
     }
+    z-index: 9999;
 
     h2 {
         font-family: 'Sansita Swashed', cursive;

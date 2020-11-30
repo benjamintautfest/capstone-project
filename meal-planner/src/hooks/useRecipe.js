@@ -7,13 +7,16 @@ export default function useRecipe() {
     const [weekdays, setWeekdays] = useState(
         loadLocally('weekdays') ?? mealPlan
     )
+
+    console.log(weekdays.map((weekday) => weekday))
+
     const [selectedWeekday, setSelectedWeekday] = useState('')
     const [showRecipe, setShowRecipe] = useState(false)
 
     const [selectedMeal, setSelectedMeal] = useState({
         title: '',
-        instructions: '',
         ingredients: '',
+        instructions: '',
         image: '',
     })
 
@@ -21,7 +24,7 @@ export default function useRecipe() {
         setSelectedWeekday(event.currentTarget.id)
     }
 
-    function selectMeal(meal, id, instructions, ingredients, image) {
+    function selectMeal(meal, id, ingredients, instructions, image) {
         setSelectedWeekday('')
         const updatedWeekdays = weekdays.map((weekday) =>
             weekday.id === id
