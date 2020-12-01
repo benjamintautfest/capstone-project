@@ -8,7 +8,9 @@ export default function useRecipe() {
         loadLocally('weekdays') ?? mealPlan
     )
 
-    console.log(weekdays.map((weekday) => weekday))
+    const shoppingListItems = weekdays.map((weekday) => weekday.ingredients)
+
+    console.log(shoppingListItems)
 
     const [selectedWeekday, setSelectedWeekday] = useState('')
     const [showRecipe, setShowRecipe] = useState(false)
@@ -59,5 +61,6 @@ export default function useRecipe() {
         handleShowRecipe,
         selectMeal,
         setWeekdays,
+        shoppingListItems,
     }
 }
