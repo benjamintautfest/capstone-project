@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import shoppingCart from '../assets/shopping_cart.svg'
 import home from '../assets/home.svg'
 
-export default function Footer() {
+export default function Footer({ shoppingListClick }) {
     return (
         <FooterStyled>
             <div>
@@ -14,11 +14,7 @@ export default function Footer() {
                     <img
                         src={shoppingCart}
                         alt=""
-                        onClick={() => {
-                            console.log(
-                                'load the god damn ingredients to the shopping list'
-                            )
-                        }}
+                        onClick={shoppingListClick}
                     />
                 </Link>
             </div>

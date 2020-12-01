@@ -19,7 +19,7 @@ export default function App() {
                     <ShoppingList recipes={shoppingItems} />
                 </Route>
             </Switch>
-            <Footer />
+            <Footer shoppingListClick={() => console.log('hallo')} />
         </AppStyled>
     )
 }
