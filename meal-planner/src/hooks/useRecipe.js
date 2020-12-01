@@ -57,6 +57,5 @@ export default function useRecipe() {
         handleShowRecipe,
         selectMeal,
         setWeekdays,
-        shoppingListItems,
     }
 }

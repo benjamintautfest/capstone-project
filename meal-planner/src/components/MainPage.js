@@ -2,20 +2,17 @@ import styled from 'styled-components/macro'
 import Button from './Button'
 import MealSelectMenu from './MealSelectMenu'
 import RecipePage from './RecipePage'
-import useRecipe from '../hooks/useRecipe'
 
-export default function MainPage() {
-    const {
-        weekdays,
-        selectedWeekday,
-        showRecipe,
-        selectedMeal,
-        handleClick,
-        handleCloseRecipe,
-        handleShowRecipe,
-        selectMeal,
-    } = useRecipe()
-
+export default function MainPage({
+    handleCloseRecipe,
+    selectedMeal,
+    weekdays,
+    handleClick,
+    showRecipe,
+    selectedWeekday,
+    selectMeal,
+    handleShowRecipe,
+}) {
     return (
         <SectionStyled>
             {showRecipe ? (

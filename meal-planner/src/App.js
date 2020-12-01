@@ -6,20 +6,43 @@ import ShoppingList from './components/ShoppingList'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import shoppingItems from './data/recipeData.json'
+import useRecipe from './hooks/useRecipe'
 
 export default function App() {
+    const {
+        weekdays,
+        selectedWeekday,
+        showRecipe,
+        selectedMeal,
+        handleClick,
+        handleCloseRecipe,
+        handleShowRecipe,
+        selectMeal,
+    } = useRecipe()
+
+    const shoppingListItems = weekdays.map((weekday) => weekday.ingredients)
+
     return (
         <AppStyled>
             <Header />
             <Switch>
                 <Route path="/" exact>
-                    <MainPage />
+                    <MainPage
+                        weekdays={weekdays}
+                        selectedWeekday={selectedWeekday}
+                        showRecipe={showRecipe}
+                        selectedMeal={selectedMeal}
+                        handleClick={handleClick}
+                        handleCloseRecipe={handleCloseRecipe}
+                        handleShowRecipe={handleShowRecipe}
+                        selectMeal={selectMeal}
+                    />
                 </Route>
                 <Route path="/shopping-list">
                     <ShoppingList recipes={shoppingItems} />
                 </Route>
             </Switch>
-            <Footer shoppingListClick={() => console.log('hallo')} />
+            <Footer shoppingListClick={() => console.log(shoppingListItems)} />
         </AppStyled>
     )
 }
