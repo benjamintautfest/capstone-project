@@ -39,15 +39,7 @@ export default function App() {
                     />
                 </Route>
                 <Route path="/shopping-list">
-                    <ShoppingList>
-                        <ul>
-                            {weekdays.map((weekday) =>
-                                weekday.ingredients.map((ingredient) => (
-                                    <li>{ingredient}</li>
-                                ))
-                            )}
-                        </ul>
-                    </ShoppingList>
+                    <ShoppingList recipes={weekdays} />
                 </Route>
             </Switch>
             <Footer

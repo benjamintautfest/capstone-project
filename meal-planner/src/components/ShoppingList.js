@@ -5,13 +5,12 @@ ShoppingList.propTypes = {
     recipes: PropTypes.array.isRequired,
 }
 
-export default function ShoppingList({ children }) {
+export default function ShoppingList({ recipes }) {
     return (
         <DivStyled>
             <h1>Einkaufsliste</h1>
-            <div>
-                {children}
-                {/* {recipes.map(({ ingredients, id }) =>
+            {/* <div>
+                {recipes.map(({ ingredients, id }) =>
                     ingredients.map((item, index) => (
                         <li key={index}>
                             {item}
@@ -19,8 +18,19 @@ export default function ShoppingList({ children }) {
                             <label htmlFor={item}></label>
                         </li>
                     ))
-                )} */}
-            </div>
+                )}
+            </div> */}
+            <ul>
+                {recipes.map((weekday) =>
+                    weekday.ingredients.map((ingredient, index) => (
+                        <li key={index}>
+                            {ingredient}
+                            <input id={ingredient} type="checkbox" />
+                            <label htmlFor={ingredient}></label>
+                        </li>
+                    ))
+                )}
+            </ul>
         </DivStyled>
     )
 }
