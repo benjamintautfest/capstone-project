@@ -20,8 +20,8 @@ export default function App() {
         selectMeal,
     } = useRecipe()
 
-    const shoppingListItems = weekdays.map((weekday) => weekday.ingredients)
-
+    /*     const shoppingListItems = weekdays.map((weekday) => weekday.ingredients)
+     */
     return (
         <AppStyled>
             <Header />
@@ -39,12 +39,20 @@ export default function App() {
                     />
                 </Route>
                 <Route path="/shopping-list">
-                    <ShoppingList /* recipes={shoppingItems} */>
-                        Hallo
+                    <ShoppingList>
+                        <ul>
+                            {weekdays.map((weekday) =>
+                                weekday.ingredients.map((ingredient) => (
+                                    <li>{ingredient}</li>
+                                ))
+                            )}
+                        </ul>
                     </ShoppingList>
                 </Route>
             </Switch>
-            <Footer shoppingListClick={() => console.log(shoppingListItems)} />
+            <Footer
+                shoppingListClick={() => console.log(/* shoppingListItems */)}
+            />
         </AppStyled>
     )
 }
