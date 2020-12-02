@@ -5,7 +5,6 @@ import { Switch, Route } from 'react-router-dom'
 import ShoppingList from './components/ShoppingList'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import shoppingItems from './data/recipeData.json'
 import useRecipe from './hooks/useRecipe'
 
 export default function App() {
@@ -20,8 +19,6 @@ export default function App() {
         selectMeal,
     } = useRecipe()
 
-    /*     const shoppingListItems = weekdays.map((weekday) => weekday.ingredients)
-     */
     return (
         <AppStyled>
             <Header />
@@ -40,11 +37,10 @@ export default function App() {
                 </Route>
                 <Route path="/shopping-list">
                     <ShoppingList recipes={weekdays} />
+                    {console.log(weekdays)}
                 </Route>
             </Switch>
-            <Footer
-                shoppingListClick={() => console.log(/* shoppingListItems */)}
-            />
+            <Footer />
         </AppStyled>
     )
 }

@@ -9,17 +9,7 @@ export default function ShoppingList({ recipes }) {
     return (
         <DivStyled>
             <h1>Einkaufsliste</h1>
-            {/* <div>
-                {recipes.map(({ ingredients, id }) =>
-                    ingredients.map((item, index) => (
-                        <li key={index}>
-                            {item}
-                            <input id={item} type="checkbox" />
-                            <label htmlFor={item}></label>
-                        </li>
-                    ))
-                )}
-            </div> */}
+
             <ul>
                 {recipes.map((weekday) =>
                     weekday.ingredients.map((ingredient, index) => (
