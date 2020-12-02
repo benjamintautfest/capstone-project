@@ -36,7 +36,7 @@ export default function App() {
                     />
                 </Route>
                 <Route path="/shopping-list">
-                    <ShoppingList recipes={weekdays} />
+                    <ShoppingList weekdays={weekdays} />
                     {console.log(weekdays)}
                 </Route>
             </Switch>

@@ -6,7 +6,7 @@ const mealPlan = [
         id: uuidv4(),
         title: '',
         image: '',
-        ingredients: '',
+        ingredients: [],
         instructions: '',
     },
     {
@@ -14,7 +14,7 @@ const mealPlan = [
         id: uuidv4(),
         title: '',
         image: '',
-        ingredients: '',
+        ingredients: [],
         instructions: '',
     },
     {
@@ -22,7 +22,7 @@ const mealPlan = [
         id: uuidv4(),
         title: '',
         image: '',
-        ingredients: '',
+        ingredients: [],
         instructions: '',
     },
     {
@@ -30,7 +30,7 @@ const mealPlan = [
         id: uuidv4(),
         title: '',
         image: '',
-        ingredients: '',
+        ingredients: [],
         instructions: '',
     },
     {
@@ -38,7 +38,7 @@ const mealPlan = [
         id: uuidv4(),
         title: '',
         image: '',
-        ingredients: '',
+        ingredients: [],
         instructions: '',
     },
     {
@@ -46,7 +46,7 @@ const mealPlan = [
         id: uuidv4(),
         title: '',
         image: '',
-        ingredients: '',
+        ingredients: [],
         instructions: '',
     },
     {
@@ -54,7 +54,7 @@ const mealPlan = [
         id: uuidv4(),
         title: '',
         image: '',
-        ingredients: '',
+        ingredients: [],
         instructions: '',
     },
 ]

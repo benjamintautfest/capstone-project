@@ -2,16 +2,16 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 ShoppingList.propTypes = {
-    recipes: PropTypes.array.isRequired,
+    weekdays: PropTypes.array.isRequired,
 }
 
-export default function ShoppingList({ recipes }) {
+export default function ShoppingList({ weekdays }) {
     return (
         <DivStyled>
             <h1>Einkaufsliste</h1>
 
             <ul>
-                {recipes.map((weekday) =>
+                {weekdays.map((weekday) =>
                     weekday.ingredients.map((ingredient, index) => (
                         <li key={index}>
                             {ingredient}

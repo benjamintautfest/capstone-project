@@ -13,7 +13,7 @@ export default function useRecipe() {
 
     const [selectedMeal, setSelectedMeal] = useState({
         title: '',
-        ingredients: '',
+        ingredients: [],
         instructions: '',
         image: '',
     })
