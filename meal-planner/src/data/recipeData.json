@@ -131,16 +131,17 @@
         "ingredients": [
             {
                 "amount": "1 kg",
-                "item": "gemischtes Gemüse z.B. Karotten, Paprika und Zucchini"
+                "item": "gemischtes Gemüse z.B. Karotten, Paprika und Zucchini",
+                "id": "053"
             },
-            { "amount": "1", "item": "Zwiebel", "id": "053" },
-            { "amount": "1", "item": "Knoblauchzehe", "id": "054" },
-            { "amount": "2 EL", "item": "Kokosöl", "id": "055" },
-            { "amount": "500 ml", "item": "Kokosmilch", "id": "056" },
+            { "amount": "1", "item": "Zwiebel", "id": "054" },
+            { "amount": "1", "item": "Knoblauchzehe", "id": "055" },
+            { "amount": "2 EL", "item": "Kokosöl", "id": "056" },
             { "amount": "500 ml", "item": "Kokosmilch", "id": "057" },
-            { "amount": "2 EL", "item": "rote Currypaste", "id": "058" },
-            { "amount": "1", "item": "Limette", "id": "059" },
-            { "amount": "1 Schote", "item": "Chili", "id": "060" }
+            { "amount": "500 ml", "item": "Kokosmilch", "id": "058" },
+            { "amount": "2 EL", "item": "rote Currypaste", "id": "059" },
+            { "amount": "1", "item": "Limette", "id": "060" },
+            { "amount": "1 Schote", "item": "Chili", "id": "061" }
         ],
         "instructions": "Gemüse putzen und mundgerecht würfeln. Zwiebel und Knoblauch schälen und fein hacken. Kokosöl in einer großen Pfanne erhitzen. Gemüse circa 10 Minuten braten, dabei regelmäßig wenden. Zwiebel und Knoblauch hinzufügen und weitere 2-3 Minuten garen. Kokosmilch, Currypaste und Limettensaft in die Pfanne geben. 5-10 Minuten einköcheln lassen, dann mit Salz, Pfeffer und Chili abschmecken. Mit Reis servieren."
     }
