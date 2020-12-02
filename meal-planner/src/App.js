@@ -39,7 +39,9 @@ export default function App() {
                     />
                 </Route>
                 <Route path="/shopping-list">
-                    <ShoppingList recipes={shoppingItems} />
+                    <ShoppingList /* recipes={shoppingItems} */>
+                        Hallo
+                    </ShoppingList>
                 </Route>
             </Switch>
             <Footer shoppingListClick={() => console.log(shoppingListItems)} />

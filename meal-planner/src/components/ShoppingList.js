@@ -1,16 +1,17 @@
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 ShoppingList.propTypes = {
     recipes: PropTypes.array.isRequired,
 }
 
-export default function ShoppingList({ recipes }) {
+export default function ShoppingList({ children }) {
     return (
         <DivStyled>
             <h1>Einkaufsliste</h1>
-            <ul>
-                {recipes.map(({ ingredients, id }) =>
+            <div>
+                {children}
+                {/* {recipes.map(({ ingredients, id }) =>
                     ingredients.map((item, index) => (
                         <li key={index}>
                             {item}
@@ -18,8 +19,8 @@ export default function ShoppingList({ recipes }) {
                             <label htmlFor={item}></label>
                         </li>
                     ))
-                )}
-            </ul>
+                )} */}
+            </div>
         </DivStyled>
     )
 }
