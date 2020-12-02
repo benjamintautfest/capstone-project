@@ -24,8 +24,8 @@ export default function RecipePage({
             <h2>{title}</h2>
             <img src={image} alt={image} />
             <ul>
-                {ingredients.map((ingredient, index) => (
-                    <li key={index}>{ingredient}</li>
+                {ingredients.map((ingredient, id) => (
+                    <li key={ingredient.id}>{ingredient.item}</li>
                 ))}
             </ul>
             <p>{instructions}</p>

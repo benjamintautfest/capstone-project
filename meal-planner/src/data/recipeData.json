@@ -58,8 +58,8 @@
             { "amount": "2", "item": "Bananen", "id": "022" },
             { "amount": "2", "item": "Ei(er)", "id": "023" },
             { "amount": "110 g", "item": "Mehl", "id": "024" },
-            { "amount": "2 EL", "item": "Öl", "id": "023" },
-            { "amount": "1 Prise", "item": "Salz", "id": "024" }
+            { "amount": "2 EL", "item": "Öl", "id": "025" },
+            { "amount": "1 Prise", "item": "Salz", "id": "026" }
         ],
         "instructions": "Die Bananen mit der Gabel zerquetschen und die restlichen Zutaten dazugeben, zu einem glatten Teig verrühren. Öl in eine flache (am besten Crêpes-) Pfanne tun und auf dem Herd wie Crêpes ausbacken. Lecker dazu: Nutella oder Marmelade. "
     },
@@ -68,15 +68,15 @@
         "meal": "Paprika-Zwiebel-Quiche",
         "image": "/images/quiche.png",
         "ingredients": [
-            { "amount": "200 g", "item": "Mehl", "id": "025" },
-            { "amount": "100 g", "item": "Butter", "id": "026" },
-            { "amount": "3", "item": "Ei(er)", "id": "027" },
-            { "amount": "1 Flasche", "item": "Mineralwasser", "id": "028" },
-            { "amount": "3", "item": "Paprikaschoten, rot", "id": "029" },
-            { "amount": "3", "item": "Zwiebel(n)", "id": "030" },
-            { "amount": "100 g", "item": "Crème fraîche", "id": "031" },
-            { "amount": "1 EL", "item": "Tomatenmark", "id": "032" },
-            { "amount": "1 EL", "item": "Käse, gerieben", "id": "033" }
+            { "amount": "200 g", "item": "Mehl", "id": "027" },
+            { "amount": "100 g", "item": "Butter", "id": "028" },
+            { "amount": "3", "item": "Ei(er)", "id": "029" },
+            { "amount": "1 Flasche", "item": "Mineralwasser", "id": "030" },
+            { "amount": "3", "item": "Paprikaschoten, rot", "id": "031" },
+            { "amount": "3", "item": "Zwiebel(n)", "id": "032" },
+            { "amount": "100 g", "item": "Crème fraîche", "id": "033" },
+            { "amount": "1 EL", "item": "Tomatenmark", "id": "034" },
+            { "amount": "1 EL", "item": "Käse, gerieben", "id": "035" }
         ],
         "instructions": "Aus dem Mehl, der Butter, einem Ei, Mineralwasser und etwas Salz einen Mürbeteig kneten. Danach den Teig in Klarsichtfolie einrollen und im Kühlschrank ca. 1 Stunde ziehen lassen. Jetzt die roten Paprikaschoten entkernen und fein würfeln. Zwiebeln ebenfalls schälen und fein würfeln. Das Gemüse in einer Pfanne bei geschlossenem Deckel so lange anschwitzen, bis es glasig ist. Das dauert ca. 20 Minuten, danach den Herd abschalten und etwas abkühlen lassen. Anschließend den Mürbeteig aus dem Kühlschrank holen, ausrollen und eine gefettete 26-er Springform damit auskleiden. Den Boden mit einer Gabel mehrfach einstechen. Paprika, Zwiebel, 2 Eier, Käse, Ajvar, Tomatenmark und Crème fraîche miteinander vermischen und mit Salz und Pfeffer abschmecken. Die Masse gleichmäßig in der Springform verstreichen. Jetzt die Quiche bei 190 °C Ober-/Unterhitze ca. 40 Minuten backen. Etwas abkühlen lassen vor dem Servieren."
     },
@@ -86,11 +86,11 @@
         "meal": "Käse-Lauch-Suppe",
         "image": "/images/leeksoup.png",
         "ingredients": [
-            { "amount": "300 ml", "item": "Gemüsebrühe", "id": "034" },
-            { "amount": "200 g", "item": "Blumenkohl", "id": "035" },
-            { "amount": "1", "item": "Lauch", "id": "036" },
-            { "amount": "150g", "item": "Sahneschmelzkäse", "id": "037" },
-            { "amount": "1 Packung", "item": "Paprikapulver", "id": "038" }
+            { "amount": "300 ml", "item": "Gemüsebrühe", "id": "036" },
+            { "amount": "200 g", "item": "Blumenkohl", "id": "037" },
+            { "amount": "1", "item": "Lauch", "id": "038" },
+            { "amount": "150g", "item": "Sahneschmelzkäse", "id": "039" },
+            { "amount": "1 Packung", "item": "Paprikapulver", "id": "040" }
         ],
         "instructions": "In einem kleinen Topf die Gemüsebrühe zum Kochen bringen und den klein zerstoßenen Blumenkohl etwa 5 min darin kochen. In einem anderen Topf Salzwasser zum Kochen bringen und den Lauch in Ringe geschnitten auch etwa 5 min vorkochen, dann abgießen. In dem Topf mit dem Blumenkohl den Sahnekäse zum Schmelzen bringen, am besten kräftig mit dem Schneebesen einrühren. Suppe würzen. Porree dazugeben, gut verrühren, fertig."
     },
@@ -99,12 +99,12 @@
         "meal": "Linsensuppe",
         "image": "/images/lentilsoup.png",
         "ingredients": [
-            { "amount": "200g", "item": "Linsen", "id": "039" },
-            { "amount": "4", "item": "große Kartoffeln", "id": "040" },
-            { "amount": "1", "item": "Zwiebel", "id": "041" },
-            { "amount": "1", "item": "Suppengemüse", "id": "042" },
-            { "amount": "1 Liter", "item": "Gemüsesaft", "id": "043" },
-            { "amount": "3 EL", "item": "Gemüsebrühe", "id": "044" }
+            { "amount": "200g", "item": "Linsen", "id": "041" },
+            { "amount": "4", "item": "große Kartoffeln", "id": "042" },
+            { "amount": "1", "item": "Zwiebel", "id": "043" },
+            { "amount": "1", "item": "Suppengemüse", "id": "044" },
+            { "amount": "1 Liter", "item": "Gemüsesaft", "id": "045" },
+            { "amount": "3 EL", "item": "Gemüsebrühe", "id": "046" }
         ],
         "instructions": "Die Linsen in reichlich Wasser ohne Salz aufkochen und etwa 15 Minuten köcheln lassen. In der Zwischenzeit die Kartoffeln schälen, in kleine Würfel schneiden, das Suppengemüse putzen und in sehr kleine Würfel schneiden, bzw. in einem Multizerkleinerer hacken. Die Linsen in ein Sieb abgießen und abtropfen lassen. In einem großen Topf das Gemüse mit Öl andünsten, Kartoffelwürfel hinzufügen und mit dem Gemüsesaft ablöschen. Die Lorbeerblätter, das Gemüsebrühepulver und die vorgekochten Linsen hinzufügen. Die Linsensuppe solange kochen, bis die Kartoffelwürfel weich sind. Gehackte Petersilie hinzufügen und mit Salz, Pfeffer und wer mag mit reichlich Kümmel abschmecken."
     },
@@ -113,12 +113,12 @@
         "meal": "Spaghetti Carbonara",
         "image": "/images/carbonara.png",
         "ingredients": [
-            { "amount": "1 Packung", "item": "Spaghetti", "id": "045" },
-            { "amount": "200 g", "item": "Pancetta", "id": "046" },
-            { "amount": "4", "item": "Ei(er", "id": "047" },
-            { "amount": "50g", "item": "Butter", "id": "048" },
-            { "amount": "1", "item": "schwarzer Pfeffer", "id": "049" },
-            { "amount": "1", "item": "frisch geriebener Parmesan", "id": "050" }
+            { "amount": "1 Packung", "item": "Spaghetti", "id": "047" },
+            { "amount": "200 g", "item": "Pancetta", "id": "048" },
+            { "amount": "4", "item": "Ei(er", "id": "049" },
+            { "amount": "50g", "item": "Butter", "id": "050" },
+            { "amount": "1", "item": "schwarzer Pfeffer", "id": "051" },
+            { "amount": "1", "item": "frisch geriebener Parmesan", "id": "052" }
         ],
         "instructions": "Die Pasta in reichlich Salzwasser bissfest kochen. Den Schinken in Würfel schneiden und in wenig Butter anbraten. Eigelb in einer großen Schüssel mit Salz, Pfeffer und Muskat verquirlen. Die Butter schaumig rühren und gut unter das Eigelb mischen. Die Schinkenwürfel und den geriebenen Käse gründlich unterrühren. Wenn die Nudeln gar sind, abgießen, sofort zu der Mischung in die Schüssel geben, nochmal alles gründlich durchmischen, dann sogleich servieren."
     },
@@ -133,14 +133,14 @@
                 "amount": "1 kg",
                 "item": "gemischtes Gemüse z.B. Karotten, Paprika und Zucchini"
             },
-            { "amount": "1", "item": "Zwiebel", "id": "051" },
-            { "amount": "1", "item": "Knoblauchzehe", "id": "052" },
-            { "amount": "2 EL", "item": "Kokosöl", "id": "053" },
-            { "amount": "500 ml", "item": "Kokosmilch", "id": "054" },
-            { "amount": "500 ml", "item": "Kokosmilch", "id": "055" },
-            { "amount": "2 EL", "item": "rote Currypaste", "id": "056" },
-            { "amount": "1", "item": "Limette", "id": "057" },
-            { "amount": "1 Schote", "item": "Chili", "id": "058" }
+            { "amount": "1", "item": "Zwiebel", "id": "053" },
+            { "amount": "1", "item": "Knoblauchzehe", "id": "054" },
+            { "amount": "2 EL", "item": "Kokosöl", "id": "055" },
+            { "amount": "500 ml", "item": "Kokosmilch", "id": "056" },
+            { "amount": "500 ml", "item": "Kokosmilch", "id": "057" },
+            { "amount": "2 EL", "item": "rote Currypaste", "id": "058" },
+            { "amount": "1", "item": "Limette", "id": "059" },
+            { "amount": "1 Schote", "item": "Chili", "id": "060" }
         ],
         "instructions": "Gemüse putzen und mundgerecht würfeln. Zwiebel und Knoblauch schälen und fein hacken. Kokosöl in einer großen Pfanne erhitzen. Gemüse circa 10 Minuten braten, dabei regelmäßig wenden. Zwiebel und Knoblauch hinzufügen und weitere 2-3 Minuten garen. Kokosmilch, Currypaste und Limettensaft in die Pfanne geben. 5-10 Minuten einköcheln lassen, dann mit Salz, Pfeffer und Chili abschmecken. Mit Reis servieren."
     }
