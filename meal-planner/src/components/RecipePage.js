@@ -1,8 +1,17 @@
 import styled from 'styled-components/macro'
+import PropTypes from 'prop-types'
+
+RecipePage.propTypes = {
+    closeRecipe: PropTypes.func.isRequired,
+    id: PropTypes.number,
+    title: PropTypes.string.isRequired,
+    image: PropTypes.any.isRequired,
+    ingredients: PropTypes.array.isRequired,
+    instructions: PropTypes.string.isRequired,
+}
 
 export default function RecipePage({
     closeRecipe,
-    meals,
     id,
     title,
     image,
@@ -15,8 +24,8 @@ export default function RecipePage({
             <h2>{title}</h2>
             <img src={image} alt={image} />
             <ul>
-                {ingredients.map((ingredient, index) => (
-                    <li key={index}>{ingredient}</li>
+                {ingredients.map((ingredient, id) => (
+                    <li key={ingredient.id}>{ingredient.item}</li>
                 ))}
             </ul>
             <p>{instructions}</p>
@@ -26,13 +35,18 @@ export default function RecipePage({
 
 const SectionStyled = styled.section`
     background: #800000fe;
+    max-width: 600px;
     position: absolute;
     top: 0;
     height: 100%;
-    display: block;
+    //display: block;
     padding: 0 30px;
     width: 100%;
     scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    z-index: 9999;
 
     h2 {
         font-family: 'Sansita Swashed', cursive;
@@ -65,7 +79,6 @@ const SectionStyled = styled.section`
         color: ivory;
         padding: 15px;
         line-height: 1.5em;
-        color: ivory;
         border-bottom: ivory dotted 1px;
         border-top: ivory dotted 1px;
     }

@@ -1,9 +1,10 @@
 import styled from 'styled-components/macro'
 import woodBackground from './assets/wood_background.jpg'
-import logo from './assets/logo.svg'
-import Button from './components/Button'
-import MealSelectMenu from './components/MealSelectMenu'
-import RecipePage from './components/RecipePage'
+import MainPage from './components/MainPage'
+import { Switch, Route } from 'react-router-dom'
+import ShoppingList from './components/ShoppingList'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import useRecipe from './hooks/useRecipe'
 
 export default function App() {
@@ -20,41 +21,25 @@ export default function App() {
 
     return (
         <AppStyled>
-            <header>
-                <img src={logo} alt="" />
-            </header>
-            <section>
-                {showRecipe ? (
-                    <RecipePage
-                        closeRecipe={handleCloseRecipe}
-                        title={selectedMeal.title}
-                        image={selectedMeal.image}
-                        ingredients={selectedMeal.ingredients}
-                        instructions={selectedMeal.instructions}
+            <Header />
+            <Switch>
+                <Route path="/" exact>
+                    <MainPage
+                        weekdays={weekdays}
+                        selectedWeekday={selectedWeekday}
+                        showRecipe={showRecipe}
+                        selectedMeal={selectedMeal}
+                        handleClick={handleClick}
+                        handleCloseRecipe={handleCloseRecipe}
+                        handleShowRecipe={handleShowRecipe}
+                        selectMeal={selectMeal}
                     />
-                ) : (
-                    ''
-                )}
-                {weekdays &&
-                    weekdays.map(({ weekday, id, meal }) => (
-                        <div key={id}>
-                            <Button
-                                day={weekday}
-                                id={weekday}
-                                meal={meal}
-                                onClick={handleClick}
-                            />
-                            {selectedWeekday === weekday && (
-                                <MealSelectMenu
-                                    handleMealClick={selectMeal}
-                                    weekdayId={id}
-                                    handleRecipeClick={handleShowRecipe}
-                                />
-                            )}
-                        </div>
-                    ))}
-            </section>
-            <footer>&copy; take seven 2020</footer>
+                </Route>
+                <Route path="/shopping-list">
+                    <ShoppingList weekdays={weekdays} />
+                </Route>
+            </Switch>
+            <Footer />
         </AppStyled>
     )
 }
@@ -69,16 +54,7 @@ const AppStyled = styled.div`
     background-size: cover;
     height: 100vh;
     max-width: 600px;
-
-    header {
-        box-shadow: 10px 0 30px #b16c16;
-        padding-bottom: 30px;
-        position: sticky;
-    }
-
-    h1 {
-        color: white;
-    }
+    scrollbar-width: none;
 
     img {
         width: 130px;
@@ -89,17 +65,8 @@ const AppStyled = styled.div`
         overflow: auto;
         padding-top: 10px;
         scrollbar-width: none;
-        z-index: 9999;
         &::-webkit-scrollbar {
             display: none;
         }
-    }
-
-    footer {
-        box-shadow: -10px 0 30px #b16c16;
-        z-index: 0;
-        display: grid;
-        place-items: center;
-        color: white;
     }
 `

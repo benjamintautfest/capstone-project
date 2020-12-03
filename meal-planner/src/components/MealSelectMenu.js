@@ -1,5 +1,12 @@
 import styled from 'styled-components/macro'
 import meals from '../data/recipeData.json'
+import PropTypes from 'prop-types'
+
+MealSelectMenu.propTypes = {
+    weekdayId: PropTypes.string.isRequired,
+    handleMealClick: PropTypes.func.isRequired,
+    handleRecipeClick: PropTypes.func.isRequired,
+}
 
 export default function MealSelectMenu({
     weekdayId,
