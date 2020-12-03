@@ -12,9 +12,9 @@ export default function ShoppingList({ weekdays }) {
 
             <ul>
                 {weekdays.map((weekday) =>
-                    weekday.ingredients.map((ingredient, id) => (
-                        <li key={id}>
-                            {`${ingredient.amount} ${ingredient.item}`}
+                    weekday.ingredients.map((ingredient) => (
+                        <li key={ingredient.id}>
+                            {`${ingredient.amount} ${ingredient.units} ${ingredient.item}`}
                             <input id={ingredient.id} type="checkbox" />
                             <label htmlFor={ingredient.id}></label>
                         </li>
