@@ -17,6 +17,7 @@ export default function App() {
         handleCloseRecipe,
         handleShowRecipe,
         selectMeal,
+        setSelectedWeekday,
     } = useRecipe()
 
     return (
@@ -39,7 +40,7 @@ export default function App() {
                     <ShoppingList weekdays={weekdays} />
                 </Route>
             </Switch>
-            <Footer />
+            <Footer shoppingListClick={() => setSelectedWeekday()} />
         </AppStyled>
     )
 }
