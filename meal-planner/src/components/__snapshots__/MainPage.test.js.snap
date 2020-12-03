@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainPage renders correctly 1`] = `
+<section
+  class="MainPage__SectionStyled-jplvfi-0 gEeWgy"
+>
+  
+  <div>
+    <button
+      class="Button__ButtonStyled-sc-102td2i-0 cTEKEK"
+      data-testid="Montag"
+      id="Montag"
+    >
+      <span
+        class="day"
+      >
+        Montag
+      </span>
+      <span
+        class="meal"
+      >
+        Gemüselasagne
+      </span>
+    </button>
+  </div>
+</section>
+`;

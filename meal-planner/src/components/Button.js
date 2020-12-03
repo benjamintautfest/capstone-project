@@ -4,15 +4,15 @@ import PropTypes from 'prop-types'
 
 Button.propTypes = {
     day: PropTypes.string.isRequired,
-    meal: PropTypes.string,
-    onClick: PropTypes.func.isRequired,
+    meal: PropTypes.string.isRequired,
+    onClick: PropTypes.func,
     id: PropTypes.string.isRequired,
 }
 
 export default function Button({ day, meal, onClick, id }) {
     meal = meal ? meal : 'Auswählen'
     return (
-        <ButtonStyled id={id} onClick={onClick}>
+        <ButtonStyled data-testid={day} id={id} onClick={onClick}>
             <span className={'day'}>{day}</span>
             <span className={'meal'}>{meal}</span>
         </ButtonStyled>
