@@ -25,6 +25,7 @@ export default function ShoppingList({ weekdays }) {
                 {Object.values(shoppingItems).map((ingredient) => (
                     <li key={ingredient.id}>
                         <input id={ingredient.id} type="checkbox" />
+
                         <label
                             htmlFor={ingredient.id}
                         >{`${ingredient.amount} ${ingredient.units} ${ingredient.item}`}</label>
@@ -48,7 +49,6 @@ const DivStyled = styled.div`
     }
 
     ul {
-        text-align: left;
         font-family: 'Sansita Swashed', cursive;
         font-size: 1.5em;
         list-style: none;
@@ -57,8 +57,6 @@ const DivStyled = styled.div`
     }
 
     li {
-        display: flex;
-        justify-content: space-between;
         border-bottom: 1px dotted black;
         font-size: 0.9em;
     }
@@ -74,6 +72,7 @@ const DivStyled = styled.div`
         color: white;
         border: 2px solid papayawhip;
         position: relative;
+        left: 90%;
         content: '';
         display: grid;
         line-height: 0;
@@ -81,6 +80,11 @@ const DivStyled = styled.div`
         top: 4px;
         border-radius: 3px;
         transform: scale(0.75);
+    }
+
+    label {
+        display: flex;
+        margin-left: -35px;
     }
 
     input[type='checkbox']:checked + label::before {
