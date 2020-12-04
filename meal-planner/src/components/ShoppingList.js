@@ -8,10 +8,10 @@ ShoppingList.propTypes = {
 export default function ShoppingList({ weekdays }) {
     const shoppingItems = weekdays.reduce((acc, curr) => {
         curr.ingredients.forEach((ingredient) => {
-            if (acc[ingredient.id] === undefined) {
-                acc[ingredient.id] = { ...ingredient }
+            if (acc[ingredient.item] === undefined) {
+                acc[ingredient.item] = { ...ingredient }
             } else {
-                acc[ingredient.id].amount += ingredient.amount
+                acc[ingredient.item].amount += ingredient.amount
             }
         })
         return acc
