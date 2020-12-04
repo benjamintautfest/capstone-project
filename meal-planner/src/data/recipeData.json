@@ -74,21 +74,21 @@
         "ingredients": [
             {
                 "amount": 1,
-                "units": "Packung",
+                "units": "Pck.",
                 "item": "getrocknete Steinpilze",
                 "id": "017"
             },
-            { "amount": 1, "units": "", "item": "Zwiebel", "id": "018" },
+            { "amount": 1, "units": "", "item": "Zwiebel(n)", "id": "018" },
             { "amount": 3, "units": "EL", "item": "Butter", "id": "019" },
             {
                 "amount": 1,
-                "units": "Knolle",
+                "units": "Knolle(n)",
                 "item": "Knoblauch",
                 "id": "020"
             },
             {
                 "amount": 1,
-                "units": "Packung",
+                "units": "Pck.",
                 "item": "Risottoreis",
                 "id": "021"
             }
@@ -168,7 +168,7 @@
             },
             {
                 "amount": 1,
-                "units": "Packung",
+                "units": "Pck.",
                 "item": "Paprikapulver",
                 "id": "040"
             }
@@ -187,7 +187,7 @@
                 "item": "große Kartoffeln",
                 "id": "042"
             },
-            { "amount": 1, "units": "", "item": "Zwiebel", "id": "043" },
+            { "amount": 1, "units": "", "item": "Zwiebel(n)", "id": "043" },
             { "amount": 1, "units": "", "item": "Suppengemüse", "id": "044" },
             {
                 "amount": 1,
@@ -206,7 +206,7 @@
         "ingredients": [
             {
                 "amount": 1,
-                "units": "Packung",
+                "units": "Pck.",
                 "item": "Spaghetti",
                 "id": "047"
             },
@@ -240,7 +240,7 @@
                 "item": "gemischtes Gemüse z.B. Karotten, Paprika und Zucchini",
                 "id": "053"
             },
-            { "amount": 1, "units": "", "item": "Zwiebel", "id": "054" },
+            { "amount": 1, "units": "", "item": "Zwiebel(n)", "id": "054" },
             { "amount": 1, "units": "g", "item": "Knoblauchzehe", "id": "055" },
             { "amount": 2, "units": "El", "item": "Kokosöl", "id": "056" },
             { "amount": 500, "units": "ml", "item": "Kokosmilch", "id": "057" },

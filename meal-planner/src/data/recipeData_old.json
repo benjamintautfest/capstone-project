@@ -7,7 +7,7 @@
             { "amount": "600 g", "item": "Blattspinat", "id": "001" },
             { "amount": "2", "item": "große Karotten", "id": "002" },
             { "amount": "7", "item": "große Champignons", "id": "003" },
-            { "amount": "1", "item": "große Zwiebel", "id": "004" },
+            { "amount": "1", "item": "große Zwiebel(n)", "id": "004" },
             { "amount": "500 ml", "item": "passierte Tomaten", "id": "005" },
             { "amount": "3 EL", "item": "Butter", "id": "006" },
             { "amount": "5 EL", "item": "Milch", "id": "007" },
@@ -26,7 +26,7 @@
             { "amount": "1 kl. Dose", "item": "Mais", "id": "011" },
             { "amount": "250 g", "item": "vegetarisches Hack", "id": "012" },
             { "amount": "2", "item": "Paprikaschoten", "id": "013" },
-            { "amount": "2-3", "item": "Zwiebeln", "id": "014" },
+            { "amount": "2-3", "item": "Zwiebel(n)", "id": "014" },
             { "amount": "5 EL", "item": "Milch", "id": "015" },
             { "amount": "1 Paket", "item": "Lasagneplatten", "id": "016" }
         ],
