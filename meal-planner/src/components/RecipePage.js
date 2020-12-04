@@ -25,7 +25,9 @@ export default function RecipePage({
             <img src={image} alt={image} />
             <ul>
                 {ingredients.map((ingredient, id) => (
-                    <li key={ingredient.id}>{ingredient.item}</li>
+                    <li key={ingredient.id}>
+                        {`${ingredient.amount} ${ingredient.units} ${ingredient.item}`}
+                    </li>
                 ))}
             </ul>
             <p>{instructions}</p>

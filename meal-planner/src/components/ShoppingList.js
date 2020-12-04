@@ -6,20 +6,30 @@ ShoppingList.propTypes = {
 }
 
 export default function ShoppingList({ weekdays }) {
+    const shoppingItems = weekdays.reduce((acc, curr) => {
+        curr.ingredients.forEach((ingredient) => {
+            if (acc[ingredient.id] === undefined) {
+                acc[ingredient.id] = { ...ingredient }
+            } else {
+                acc[ingredient.id].amount += ingredient.amount
+            }
+        })
+        return acc
+    }, {})
+
     return (
         <DivStyled>
             <h1>Einkaufsliste</h1>
 
             <ul>
-                {weekdays.map((weekday) =>
-                    weekday.ingredients.map((ingredient) => (
-                        <li key={ingredient.id}>
-                            {`${ingredient.amount} ${ingredient.units} ${ingredient.item}`}
-                            <input id={ingredient.id} type="checkbox" />
-                            <label htmlFor={ingredient.id}></label>
-                        </li>
-                    ))
-                )}
+                {Object.values(shoppingItems).map((ingredient) => (
+                    <li key={ingredient.id}>
+                        <input id={ingredient.id} type="checkbox" />
+                        <label
+                            htmlFor={ingredient.id}
+                        >{`${ingredient.amount} ${ingredient.units} ${ingredient.item}`}</label>
+                    </li>
+                ))}
             </ul>
         </DivStyled>
     )
