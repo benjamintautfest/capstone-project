@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 Button.propTypes = {
     day: PropTypes.string.isRequired,
-    meal: PropTypes.string.isRequired,
+    meal: PropTypes.string,
     onClick: PropTypes.func,
     id: PropTypes.string.isRequired,
 }
