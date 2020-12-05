@@ -11,7 +11,6 @@ export default function App() {
     const {
         weekdays,
         selectedWeekday,
-        showRecipe,
         selectedMeal,
         handleClick,
         handleCloseRecipe,
@@ -28,7 +27,7 @@ export default function App() {
                     <MainPage
                         weekdays={weekdays}
                         selectedWeekday={selectedWeekday}
-                        showRecipe={showRecipe}
+                        showRecipe={!!selectedMeal}
                         selectedMeal={selectedMeal}
                         handleClick={handleClick}
                         handleCloseRecipe={handleCloseRecipe}
@@ -40,7 +39,7 @@ export default function App() {
                     <ShoppingList weekdays={weekdays} />
                 </Route>
             </Switch>
-            <Footer shoppingListClick={() => setSelectedWeekday()} />
+            <Footer />
         </AppStyled>
     )
 }

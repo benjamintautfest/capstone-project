@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import mealPlan from '../data/MealPlan'
 import loadLocally from '../lib/loadLocally'
 import saveLocally from '../lib/saveLocally'
@@ -9,14 +9,13 @@ export default function useRecipe() {
     )
 
     const [selectedWeekday, setSelectedWeekday] = useState('')
-    const [showRecipe, setShowRecipe] = useState(false)
 
-    const [selectedMeal, setSelectedMeal] = useState({
-        title: '',
-        ingredients: [],
-        instructions: '',
-        image: '',
-    })
+    const [selectedMeal, setSelectedMeal] = useState(null)
+    const showRecipe = !!selectedMeal
+
+    useEffect(() => {
+        saveLocally('weekdays', weekdays)
+    }, [weekdays])
 
     function handleClick(event) {
         setSelectedWeekday(event.currentTarget.id)
@@ -30,11 +29,9 @@ export default function useRecipe() {
                 : weekday
         )
         setWeekdays(updatedWeekdays)
-        saveLocally('weekdays', updatedWeekdays)
     }
 
     function handleShowRecipe(title, ingredients, instructions, image) {
-        setShowRecipe(true)
         setSelectedMeal({
             title,
             ingredients,
@@ -44,7 +41,7 @@ export default function useRecipe() {
     }
 
     function handleCloseRecipe() {
-        setShowRecipe(false)
+        setSelectedMeal(null)
     }
 
     return {
