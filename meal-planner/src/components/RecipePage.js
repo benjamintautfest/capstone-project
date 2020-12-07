@@ -66,6 +66,7 @@ const SectionStyled = styled.section`
         font-size: 1.5em;
         color: white;
         padding: 5px;
+        cursor: pointer;
     }
 
     p {

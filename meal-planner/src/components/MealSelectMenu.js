@@ -72,6 +72,7 @@ const ListStyled = styled.ul`
         border-radius: 5px;
         margin: 0 4px;
         background: ivory;
+        cursor: pointer;
     }
 
     li {

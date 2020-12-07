@@ -35,6 +35,7 @@ const ButtonStyled = styled.button`
     padding: 0 30px;
     align-items: center;
     outline: 0;
+    cursor: pointer;
 
     .day {
         color: orange;

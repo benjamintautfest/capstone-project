@@ -85,6 +85,7 @@ const DivStyled = styled.div`
     label {
         display: flex;
         margin-left: -35px;
+        cursor: pointer;
     }
 
     input[type='checkbox']:checked + label::before {
