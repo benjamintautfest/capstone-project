@@ -12,10 +12,12 @@ export default function App() {
         weekdays,
         selectedWeekday,
         selectedMeal,
+        isBookmarked,
         handleClick,
         handleCloseRecipe,
         handleShowRecipe,
         selectMeal,
+        bookmarkRecipe,
     } = useRecipe()
 
     return (
@@ -32,6 +34,8 @@ export default function App() {
                         handleCloseRecipe={handleCloseRecipe}
                         handleShowRecipe={handleShowRecipe}
                         selectMeal={selectMeal}
+                        bookmarkRecipe={bookmarkRecipe}
+                        isBookmarked={isBookmarked}
                     />
                 </Route>
                 <Route path="/shopping-list">

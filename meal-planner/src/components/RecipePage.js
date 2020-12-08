@@ -1,5 +1,7 @@
 import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
+import emptyHeart from '../assets/heart_empty.svg'
+import fullHeart from '../assets/heart_full.svg'
 
 RecipePage.propTypes = {
     closeRecipe: PropTypes.func.isRequired,
@@ -17,11 +19,21 @@ export default function RecipePage({
     image,
     ingredients,
     instructions,
+    bookmarkRecipe,
+    isBookmarked,
 }) {
     return (
         <SectionStyled key={id}>
             <span onClick={closeRecipe}>&times;</span>
-            <h2>{title}</h2>
+            <div>
+                <h2>{title}</h2>{' '}
+                <img
+                    alt="bookmark"
+                    className="bookmark"
+                    src={!isBookmarked ? emptyHeart : fullHeart}
+                    onClick={bookmarkRecipe}
+                />
+            </div>
             <img src={image} alt={image} />
             <ul>
                 {ingredients.map((ingredient, id) => (
@@ -56,7 +68,18 @@ const SectionStyled = styled.section`
         margin: 10px 0 0;
         padding: 0 0 10px;
         font-size: 2em;
+    }
+
+    div {
+        display: flex;
         border-bottom: 1px dotted white;
+    }
+
+    .bookmark {
+        width: 22px;
+        position: relative;
+        top: -8px;
+        fill: yellow;
     }
 
     span {

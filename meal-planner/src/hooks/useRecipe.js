@@ -13,6 +13,13 @@ export default function useRecipe() {
     const [selectedMeal, setSelectedMeal] = useState(null)
     const showRecipe = !!selectedMeal
 
+    const [isBookmarked, setIsBookmarked] = useState(false)
+
+    function bookmarkRecipe() {
+        setIsBookmarked(!isBookmarked)
+        console.log('hallo')
+    }
+
     useEffect(() => {
         saveLocally('weekdays', weekdays)
     }, [weekdays])
@@ -49,11 +56,14 @@ export default function useRecipe() {
         selectedWeekday,
         showRecipe,
         selectedMeal,
+        isBookmarked,
         handleClick,
         handleCloseRecipe,
         handleShowRecipe,
         selectMeal,
         setWeekdays,
         setSelectedWeekday,
+        bookmarkRecipe,
+        setIsBookmarked,
     }
 }

@@ -12,6 +12,8 @@ export default function MainPage({
     selectedWeekday,
     selectMeal,
     handleShowRecipe,
+    bookmarkRecipe,
+    isBookmarked,
 }) {
     return (
         <SectionStyled>
@@ -22,6 +24,8 @@ export default function MainPage({
                     image={selectedMeal.image}
                     ingredients={selectedMeal.ingredients}
                     instructions={selectedMeal.instructions}
+                    bookmarkRecipe={bookmarkRecipe}
+                    isBookmarked={isBookmarked}
                 />
             ) : (
                 ''
