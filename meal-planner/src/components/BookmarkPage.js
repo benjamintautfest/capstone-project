@@ -34,11 +34,15 @@ const DivStyled = styled.div`
     }
 
     div {
-        border-bottom: 1px dotted black;
+        border-top: 1px dotted black;
     }
 
     .heart {
         width: 20px;
         margin-bottom: 0;
+    }
+
+    img {
+        transform: scale(0.9);
     }
 `

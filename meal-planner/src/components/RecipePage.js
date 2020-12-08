@@ -31,12 +31,12 @@ export default function RecipePage({
                     alt="bookmark"
                     className="bookmark"
                     src={!isBookmarked ? emptyHeart : fullHeart}
-                    onClick={bookmarkRecipe}
+                    onClick={() => bookmarkRecipe(id)}
                 />
             </div>
             <img src={image} alt={image} />
             <ul>
-                {ingredients.map((ingredient, id) => (
+                {ingredients.map((ingredient) => (
                     <li key={ingredient.id}>
                         {`${ingredient.amount} ${ingredient.units} ${ingredient.item}`}
                     </li>

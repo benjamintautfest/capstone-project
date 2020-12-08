@@ -13,11 +13,16 @@ export default function useRecipe() {
     const [selectedMeal, setSelectedMeal] = useState(null)
     const showRecipe = !!selectedMeal
 
-    const [isBookmarked, setIsBookmarked] = useState(false)
+    const [isBookmarked, setIsBookmarked] = useState([])
 
-    function bookmarkRecipe() {
+    console.log(isBookmarked)
+
+    function bookmarkRecipe(id) {
         setIsBookmarked(!isBookmarked)
-        console.log('hallo')
+        const upDateBookmarked = isBookmarked.includes(id)
+            ? isBookmarked.filter((bookmarkId) => bookmarkId !== id)
+            : [...isBookmarked, id]
+        setIsBookmarked(upDateBookmarked)
     }
 
     useEffect(() => {
@@ -38,12 +43,13 @@ export default function useRecipe() {
         setWeekdays(updatedWeekdays)
     }
 
-    function handleShowRecipe(title, ingredients, instructions, image) {
+    function handleShowRecipe(title, ingredients, instructions, image, id) {
         setSelectedMeal({
             title,
             ingredients,
             instructions,
             image,
+            id,
         })
     }
 

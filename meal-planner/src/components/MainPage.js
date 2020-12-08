@@ -15,6 +15,7 @@ export default function MainPage({
     bookmarkRecipe,
     isBookmarked,
 }) {
+    console.log(selectedMeal)
     return (
         <SectionStyled>
             {showRecipe ? (
@@ -26,6 +27,7 @@ export default function MainPage({
                     instructions={selectedMeal.instructions}
                     bookmarkRecipe={bookmarkRecipe}
                     isBookmarked={isBookmarked}
+                    id={selectedMeal.id}
                 />
             ) : (
                 ''
