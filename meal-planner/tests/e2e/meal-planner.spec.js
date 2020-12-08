@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /// <reference types="cypress" />
 
 const testId = (id) => `[data-testid="${id}"]`
@@ -21,6 +22,7 @@ let add3Items = () => {
 
 describe('TODO MVC', () => {
     beforeEach(() => {
+        // eslint-disable-next-line no-undef
         cy.visit('/')
     })
     describe('New todo', () => {

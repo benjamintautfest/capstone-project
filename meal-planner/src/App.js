@@ -6,6 +6,7 @@ import ShoppingList from './components/ShoppingList'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import useRecipe from './hooks/useRecipe'
+import BookmarkPage from './components/BookmarkPage'
 
 export default function App() {
     const {
@@ -40,6 +41,9 @@ export default function App() {
                 </Route>
                 <Route path="/shopping-list">
                     <ShoppingList weekdays={weekdays} />
+                </Route>
+                <Route path="/bookmarks">
+                    <BookmarkPage weekdays={weekdays} />
                 </Route>
             </Switch>
             <Footer />
