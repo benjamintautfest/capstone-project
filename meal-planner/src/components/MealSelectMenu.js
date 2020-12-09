@@ -22,12 +22,12 @@ export default function MealSelectMenu({
                         <button
                             onClick={() =>
                                 handleMealClick(
-                                    id,
                                     meal,
                                     weekdayId,
                                     ingredients,
                                     instructions,
-                                    image
+                                    image,
+                                    id
                                 )
                             }
                         >
