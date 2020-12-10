@@ -13,19 +13,15 @@ export default function useRecipe() {
     const [selectedMeal, setSelectedMeal] = useState(null)
     const showRecipe = !!selectedMeal
 
-    const [isBookmarked, setIsBookmarked] = useState({
-        bookmarkedRecipes: [],
-        buttonState: false,
-    })
-
-    console.log(isBookmarked)
+    const [isBookmarked, setIsBookmarked] = useState(true)
 
     function bookmarkRecipe(id) {
-        setIsBookmarked.buttonState(!isBookmarked.buttonSate)
+        setIsBookmarked(!isBookmarked)
+        /* 
         const upDateBookmarked = isBookmarked.includes(id)
             ? isBookmarked.filter((bookmarkId) => bookmarkId !== id)
             : [...isBookmarked, id]
-        setIsBookmarked(upDateBookmarked)
+        setIsBookmarked(upDateBookmarked) */
     }
 
     useEffect(() => {

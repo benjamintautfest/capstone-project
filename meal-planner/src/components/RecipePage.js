@@ -21,6 +21,7 @@ export default function RecipePage({
     instructions,
     bookmarkRecipe,
     isBookmarked,
+    setIsBookmarked,
 }) {
     return (
         <SectionStyled key={id}>
@@ -32,8 +33,10 @@ export default function RecipePage({
                 <img
                     alt="bookmark"
                     className="bookmark"
-                    src={!isBookmarked.buttonState ? emptyHeart : fullHeart}
-                    onClick={() => bookmarkRecipe(id)}
+                    src={!isBookmarked ? emptyHeart : fullHeart}
+                    onClick={() => {
+                        bookmarkRecipe(id)
+                    }}
                 />
             </div>
             <img src={image} alt={image} />

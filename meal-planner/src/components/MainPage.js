@@ -15,7 +15,6 @@ export default function MainPage({
     bookmarkRecipe,
     isBookmarked,
 }) {
-    console.log(selectedMeal)
     return (
         <SectionStyled>
             {showRecipe ? (
