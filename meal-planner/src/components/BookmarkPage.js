@@ -7,9 +7,7 @@ export default function BookmarkPage({ weekdays }) {
             <h1> Lieblingsessen </h1>
             {weekdays.map(({ meal, image, id, weekday }) => (
                 <div key={id} onClick={() => console.log('favourite')}>
-                    <h3>
-                        {weekday} + ' '{meal}
-                    </h3>
+                    <h3>{`am ${weekday} gibt's ${meal}`}</h3>
                     <img src={image} alt={meal} />
                 </div>
             ))}
