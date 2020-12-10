@@ -31,7 +31,7 @@ export default function MealSelectMenu({
                                 )
                             }
                         >
-                            übernehmen
+                            Übernehmen
                         </button>
                         <button
                             onClick={() =>

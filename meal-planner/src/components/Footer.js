@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 import shoppingCart from '../assets/shopping_cart.svg'
 import home from '../assets/home.svg'
-import heart from '../assets/navigation_heart.svg'
+import spoon from '../assets/spoon.svg'
 
 export default function Footer({ shoppingListClick }) {
     return (
@@ -12,7 +12,7 @@ export default function Footer({ shoppingListClick }) {
                     <img src={home} alt="home" />
                 </Link>
                 <Link to="/bookmarks">
-                    <img src={heart} className="heart" alt="bookmarks" />
+                    <img src={spoon} className="heart" alt="bookmarks" />
                 </Link>
                 <Link to="/shopping-list">
                     <img
