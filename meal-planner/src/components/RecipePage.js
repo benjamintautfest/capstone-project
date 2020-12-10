@@ -30,14 +30,6 @@ export default function RecipePage({
             </span>
             <div>
                 <h2>{title}</h2>{' '}
-                <img
-                    alt="bookmark"
-                    className="bookmark"
-                    src={!isBookmarked ? emptyHeart : fullHeart}
-                    onClick={() => {
-                        bookmarkRecipe(id)
-                    }}
-                />
             </div>
             <img src={image} alt={image} />
             <ul>
