@@ -24,13 +24,15 @@ export default function RecipePage({
 }) {
     return (
         <SectionStyled key={id}>
-            <span onClick={closeRecipe}>&times;</span>
+            <span data-testid="close-button" onClick={closeRecipe}>
+                &times;
+            </span>
             <div>
                 <h2>{title}</h2>{' '}
                 <img
                     alt="bookmark"
                     className="bookmark"
-                    src={!isBookmarked ? emptyHeart : fullHeart}
+                    src={!isBookmarked.buttonState ? emptyHeart : fullHeart}
                     onClick={() => bookmarkRecipe(id)}
                 />
             </div>
