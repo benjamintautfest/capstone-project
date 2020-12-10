@@ -4,10 +4,13 @@ import meals from '../data/recipeData.json'
 export default function BookmarkPage({ weekdays }) {
     return (
         <DivStyled>
-            <h1> Lieblingsessen </h1>
+            <h1> Wochenplan </h1>
             {weekdays.map(({ meal, image, id, weekday }) => (
                 <div key={id} onClick={() => console.log('favourite')}>
-                    <h3>{`am ${weekday} gibt's ${meal}`}</h3>
+                    <h3>
+                        {weekday}{' '}
+                        <span> {meal ? meal : 'noch nichts geplant'}</span>
+                    </h3>
                     <img src={image} alt={meal} />
                 </div>
             ))}
@@ -29,12 +32,18 @@ const DivStyled = styled.div`
 
     h3 {
         font-size: 1.2em;
-        margin-bottom: -10px;
         font-family: 'Sansita Swashed', cursive;
+        margin-bottom: -20px;
+    }
+
+    span {
+        color: maroon;
     }
 
     div {
         border-top: 1px dotted black;
+        width: 90%;
+        margin: 0 auto;
     }
 
     .heart {
@@ -44,5 +53,7 @@ const DivStyled = styled.div`
 
     img {
         transform: scale(0.9);
+        margin: 0;
+        padding: 0;
     }
 `

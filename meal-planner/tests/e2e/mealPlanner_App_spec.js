@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 describe('Take 7 Test', function () {
     it('finds an element', () => {
         cy.visit('/')

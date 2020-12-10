@@ -54,6 +54,7 @@ const DivStyled = styled.div`
         list-style: none;
         line-height: 1.75em;
         width: 90%;
+        text-align: left;
     }
 
     li {
