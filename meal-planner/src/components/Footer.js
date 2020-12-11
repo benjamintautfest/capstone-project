@@ -12,7 +12,7 @@ export default function Footer({ shoppingListClick }) {
                     <img src={home} alt="home" />
                 </Link>
                 <Link to="/weekplan">
-                    <img src={spoon} className="heart" alt="bookmarks" />
+                    <img src={spoon} className="heart" alt="weekplan" />
                 </Link>
                 <Link to="/shopping-list">
                     <img

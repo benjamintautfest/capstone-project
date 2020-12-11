@@ -75,11 +75,12 @@ const DivStyled = styled.div`
         line-height: 1.7em;
         position: relative;
         top: -30px;
+        font-weight: 300;
+        font-family: 'Sansita Swashed', cursive;
     }
 
     li {
         border-bottom: 1px dotted ivory;
-        font-family: 'Sansita Swashed', cursive;
         color: white;
     }
 

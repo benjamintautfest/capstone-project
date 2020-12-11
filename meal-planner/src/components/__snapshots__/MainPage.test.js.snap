@@ -2,12 +2,12 @@
 
 exports[`MainPage renders correctly 1`] = `
 <section
-  class="MainPage__SectionStyled-jplvfi-0 gEeWgy"
+  class="MainPage__SectionStyled-jplvfi-0 kyYimK"
 >
   
   <div>
     <button
-      class="Button__ButtonStyled-sc-102td2i-0 dfgSOm"
+      class="Button__ButtonStyled-sc-102td2i-0 iWhVon"
       data-testid="Montag"
       id="Montag"
     >

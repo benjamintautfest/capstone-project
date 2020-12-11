@@ -50,6 +50,7 @@ const DivStyled = styled.div`
 
     ul {
         font-family: 'Sansita Swashed', cursive;
+        font-weight: 300;
         font-size: 1.5em;
         list-style: none;
         line-height: 1.75em;
