@@ -8,7 +8,7 @@ This App lets you plan what you want to eat in the next seven days, saves a meal
 
 ## Screenshots
 
-![take-7-logo](src/assets/mock.jpg)
+![take-7-logo](src/assets/mockup.jpg)
 
 ## Tech Stack
 
