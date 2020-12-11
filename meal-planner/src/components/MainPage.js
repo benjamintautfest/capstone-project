@@ -51,6 +51,8 @@ export default function MainPage({
 
 const SectionStyled = styled.section`
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
     padding-top: 10px;
     scrollbar-width: none;
     &::-webkit-scrollbar {
