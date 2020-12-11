@@ -2,18 +2,22 @@ import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 import shoppingCart from '../assets/shopping_cart.svg'
 import home from '../assets/home.svg'
+import spoon from '../assets/spoon.svg'
 
 export default function Footer({ shoppingListClick }) {
     return (
         <FooterStyled>
             <div>
                 <Link to="/">
-                    <img src={home} alt="" />
+                    <img src={home} alt="home" />
+                </Link>
+                <Link to="/weekplan">
+                    <img src={spoon} className="heart" alt="weekplan" />
                 </Link>
                 <Link to="/shopping-list">
                     <img
                         src={shoppingCart}
-                        alt=""
+                        alt="shoppinglist"
                         onClick={shoppingListClick}
                     />
                 </Link>
@@ -43,6 +47,10 @@ const FooterStyled = styled.footer`
             position: relative;
             bottom: 10px;
             outline: 0;
+        }
+
+        .heart {
+            width: 21px;
         }
     }
 `

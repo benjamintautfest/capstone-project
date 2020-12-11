@@ -26,11 +26,12 @@ export default function MealSelectMenu({
                                     weekdayId,
                                     ingredients,
                                     instructions,
-                                    image
+                                    image,
+                                    id
                                 )
                             }
                         >
-                            übernehmen
+                            Übernehmen
                         </button>
                         <button
                             onClick={() =>
@@ -38,7 +39,8 @@ export default function MealSelectMenu({
                                     meal,
                                     ingredients,
                                     instructions,
-                                    image
+                                    image,
+                                    id
                                 )
                             }
                         >
@@ -72,6 +74,7 @@ const ListStyled = styled.ul`
         border-radius: 5px;
         margin: 0 4px;
         background: ivory;
+        cursor: pointer;
     }
 
     li {

@@ -31,12 +31,13 @@ export default function useRecipe() {
         setWeekdays(updatedWeekdays)
     }
 
-    function handleShowRecipe(title, ingredients, instructions, image) {
+    function handleShowRecipe(title, ingredients, instructions, image, id) {
         setSelectedMeal({
             title,
             ingredients,
             instructions,
             image,
+            id,
         })
     }
 

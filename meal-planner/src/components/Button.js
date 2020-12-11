@@ -22,7 +22,7 @@ export default function Button({ day, meal, onClick, id }) {
 const ButtonStyled = styled.button`
     display: flex;
     width: 90%;
-    margin: 10px auto;
+    margin: 8px auto;
     border: none;
     height: 50px;
     border-radius: 50px;
@@ -35,6 +35,7 @@ const ButtonStyled = styled.button`
     padding: 0 30px;
     align-items: center;
     outline: 0;
+    cursor: pointer;
 
     .day {
         color: orange;

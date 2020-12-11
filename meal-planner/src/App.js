@@ -6,6 +6,7 @@ import ShoppingList from './components/ShoppingList'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import useRecipe from './hooks/useRecipe'
+import WeekplanPage from './components/WeekplanPage'
 
 export default function App() {
     const {
@@ -16,7 +17,6 @@ export default function App() {
         handleCloseRecipe,
         handleShowRecipe,
         selectMeal,
-        setSelectedWeekday,
     } = useRecipe()
 
     return (
@@ -37,6 +37,9 @@ export default function App() {
                 </Route>
                 <Route path="/shopping-list">
                     <ShoppingList weekdays={weekdays} />
+                </Route>
+                <Route path="/weekplan">
+                    <WeekplanPage weekdays={weekdays} />
                 </Route>
             </Switch>
             <Footer />
@@ -62,7 +65,7 @@ const AppStyled = styled.div`
     }
 
     section {
-        overflow: auto;
+        overflow-y: auto;
         padding-top: 10px;
         scrollbar-width: none;
         &::-webkit-scrollbar {

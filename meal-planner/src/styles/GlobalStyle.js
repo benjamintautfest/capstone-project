@@ -14,7 +14,6 @@ body {
     margin: 0 auto;
     max-width: 600px;
     background: white;
-    
 }
 
 h1 {

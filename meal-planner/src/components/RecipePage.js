@@ -1,5 +1,7 @@
 import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
+import emptyHeart from '../assets/heart_empty.svg'
+import fullHeart from '../assets/heart_full.svg'
 
 RecipePage.propTypes = {
     closeRecipe: PropTypes.func.isRequired,
@@ -20,11 +22,15 @@ export default function RecipePage({
 }) {
     return (
         <SectionStyled key={id}>
-            <span onClick={closeRecipe}>&times;</span>
-            <h2>{title}</h2>
+            <span data-testid="close-button" onClick={closeRecipe}>
+                &times;
+            </span>
+            <div>
+                <h2>{title}</h2>
+            </div>
             <img src={image} alt={image} />
             <ul>
-                {ingredients.map((ingredient, id) => (
+                {ingredients.map((ingredient) => (
                     <li key={ingredient.id}>
                         {`${ingredient.amount} ${ingredient.units} ${ingredient.item}`}
                     </li>
@@ -56,6 +62,10 @@ const SectionStyled = styled.section`
         margin: 10px 0 0;
         padding: 0 0 10px;
         font-size: 2em;
+    }
+
+    div {
+        display: flex;
         border-bottom: 1px dotted white;
     }
 
@@ -66,6 +76,7 @@ const SectionStyled = styled.section`
         font-size: 1.5em;
         color: white;
         padding: 5px;
+        cursor: pointer;
     }
 
     p {

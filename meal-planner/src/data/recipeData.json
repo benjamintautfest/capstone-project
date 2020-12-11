@@ -238,8 +238,9 @@
 
         "ingredients": [
             {
-                "amount": "1 kg",
-                "item": "gemischtes Gemüse z.B. Karotten, Paprika und Zucchini",
+                "amount": "1",
+                "units": " kg",
+                "item": "gemischtes Gemüse",
                 "id": "053"
             },
             { "amount": 1, "units": "", "item": "Zwiebel(n)", "id": "054" },
