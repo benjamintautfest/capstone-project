@@ -5,32 +5,35 @@ export default function BookmarkPage({ weekdays }) {
             <h1> Wochenplan </h1>
 
             {weekdays.map(
-                ({ meal, image, id, weekday, ingredients, instructions }) => (
-                    <details key={id}>
-                        <summary>
-                            <h3>
-                                {weekday} &nbsp;
-                                <span>
-                                    {meal ? meal : 'noch nichts geplant'}
-                                </span>
-                            </h3>
-                            <img src={image} alt={meal} />
-                        </summary>
-                        <ul>
-                            {ingredients.map((ingredient) => (
-                                <li key={ingredient.id}>
-                                    {`${ingredient.amount} ${ingredient.units} ${ingredient.item}`}
-                                </li>
-                            ))}
-                        </ul>
+                ({ meal, image, id, weekday, ingredients, instructions }) =>
+                    meal ? (
+                        <details key={id}>
+                            <summary>
+                                <h3>
+                                    {weekday} &nbsp;
+                                    <span>
+                                        {meal ? meal : 'noch nichts geplant'}
+                                    </span>
+                                </h3>
+                                <img src={image} alt={meal} />
+                            </summary>
+                            <ul>
+                                {ingredients.map((ingredient) => (
+                                    <li key={ingredient.id}>
+                                        {`${ingredient.amount} ${ingredient.units} ${ingredient.item}`}
+                                    </li>
+                                ))}
+                            </ul>
 
-                        <p>
-                            {instructions
-                                ? instructions
-                                : `Plane ein Gericht für ${weekday} `}
-                        </p>
-                    </details>
-                )
+                            <p>
+                                {instructions
+                                    ? instructions
+                                    : `Plane ein Gericht für ${weekday} `}
+                            </p>
+                        </details>
+                    ) : (
+                        ''
+                    )
             )}
         </DivStyled>
     )

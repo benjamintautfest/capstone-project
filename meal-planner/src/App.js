@@ -69,7 +69,7 @@ const AppStyled = styled.div`
     }
 
     section {
-        overflow: auto;
+        overflow-y: auto;
         padding-top: 10px;
         scrollbar-width: none;
         &::-webkit-scrollbar {
