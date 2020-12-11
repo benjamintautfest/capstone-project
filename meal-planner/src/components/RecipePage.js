@@ -29,7 +29,7 @@ export default function RecipePage({
                 &times;
             </span>
             <div>
-                <h2>{title}</h2>{' '}
+                <h2>{title}</h2>
             </div>
             <img src={image} alt={image} />
             <ul>

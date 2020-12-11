@@ -1,21 +1,12 @@
 import styled from 'styled-components/macro'
-import RecipePage from './RecipePage'
-import spoon from '../assets/spoon.svg'
-export default function BookmarkPage({
-    weekdays,
-    showRecipe,
-    handleCloseRecipe,
-    selectedMeal,
-    bookmarkRecipe,
-    isBookmarked,
-    handleShowRecipe,
-}) {
+export default function BookmarkPage({ weekdays }) {
     return (
         <DivStyled>
             <h1> Wochenplan </h1>
+
             {weekdays.map(
                 ({ meal, image, id, weekday, ingredients, instructions }) => (
-                    <details key={id} onClick={() => console.log('hallo')}>
+                    <details key={id}>
                         <summary>
                             <h3>
                                 {weekday} &nbsp;
@@ -33,7 +24,11 @@ export default function BookmarkPage({
                             ))}
                         </ul>
 
-                        <p>{instructions}</p>
+                        <p>
+                            {instructions
+                                ? instructions
+                                : `Plane ein Gericht für ${weekday} `}
+                        </p>
                     </details>
                 )
             )}
@@ -86,7 +81,7 @@ const DivStyled = styled.div`
     }
 
     p {
-        line-height: 1.3em;
+        line-height: 1.5em;
         color: ivory;
     }
 
