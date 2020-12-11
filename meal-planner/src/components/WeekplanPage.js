@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-export default function BookmarkPage({ weekdays }) {
+export default function Weekplan({ weekdays }) {
     return (
         <DivStyled>
             <h1> Wochenplan </h1>

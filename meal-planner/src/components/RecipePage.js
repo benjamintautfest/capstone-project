@@ -19,9 +19,6 @@ export default function RecipePage({
     image,
     ingredients,
     instructions,
-    bookmarkRecipe,
-    isBookmarked,
-    setIsBookmarked,
 }) {
     return (
         <SectionStyled key={id}>
@@ -70,13 +67,6 @@ const SectionStyled = styled.section`
     div {
         display: flex;
         border-bottom: 1px dotted white;
-    }
-
-    .bookmark {
-        width: 22px;
-        position: relative;
-        top: -8px;
-        fill: yellow;
     }
 
     span {

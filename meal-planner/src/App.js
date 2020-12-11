@@ -6,19 +6,17 @@ import ShoppingList from './components/ShoppingList'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import useRecipe from './hooks/useRecipe'
-import BookmarkPage from './components/BookmarkPage'
+import WeekplanPage from './components/WeekplanPage'
 
 export default function App() {
     const {
         weekdays,
         selectedWeekday,
         selectedMeal,
-        isBookmarked,
         handleClick,
         handleCloseRecipe,
         handleShowRecipe,
         selectMeal,
-        bookmarkRecipe,
     } = useRecipe()
 
     return (
@@ -35,15 +33,13 @@ export default function App() {
                         handleCloseRecipe={handleCloseRecipe}
                         handleShowRecipe={handleShowRecipe}
                         selectMeal={selectMeal}
-                        bookmarkRecipe={bookmarkRecipe}
-                        isBookmarked={isBookmarked}
                     />
                 </Route>
                 <Route path="/shopping-list">
                     <ShoppingList weekdays={weekdays} />
                 </Route>
-                <Route path="/bookmarks">
-                    <BookmarkPage weekdays={weekdays} />
+                <Route path="/weekplan">
+                    <WeekplanPage weekdays={weekdays} />
                 </Route>
             </Switch>
             <Footer />
