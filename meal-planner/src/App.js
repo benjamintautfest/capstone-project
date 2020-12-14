@@ -1,12 +1,12 @@
+import { Route, Switch } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import woodBackground from './assets/wood_background.jpg'
-import MainPage from './components/MainPage'
-import { Switch, Route } from 'react-router-dom'
-import ShoppingList from './components/ShoppingList'
-import Header from './components/Header'
 import Footer from './components/Footer'
-import useRecipe from './hooks/useRecipe'
+import Header from './components/Header'
+import MainPage from './components/MainPage'
+import ShoppingList from './components/ShoppingList'
 import WeekplanPage from './components/WeekplanPage'
+import useRecipe from './hooks/useRecipe'
 
 export default function App() {
     const {

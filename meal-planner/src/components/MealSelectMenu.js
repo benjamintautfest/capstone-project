@@ -14,7 +14,7 @@ export default function MealSelectMenu({
     handleRecipeClick,
 }) {
     return (
-        <ListStyled>
+        <MealSelectMenuWrapper>
             {meals.map(({ meal, id, ingredients, instructions, image }) => (
                 <li key={id}>
                     {meal}
@@ -49,11 +49,11 @@ export default function MealSelectMenu({
                     </div>
                 </li>
             ))}
-        </ListStyled>
+        </MealSelectMenuWrapper>
     )
 }
 
-const ListStyled = styled.ul`
+const MealSelectMenuWrapper = styled.ul`
     display: flex;
     height: 100px;
     list-style: none;

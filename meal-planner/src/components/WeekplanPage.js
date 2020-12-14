@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro'
 export default function Weekplan({ weekdays }) {
     return (
-        <DivStyled>
+        <WeekPlanWrapper>
             <h1> Wochenplan </h1>
 
             {weekdays.map(
@@ -35,11 +35,11 @@ export default function Weekplan({ weekdays }) {
                         ''
                     )
             )}
-        </DivStyled>
+        </WeekPlanWrapper>
     )
 }
 
-const DivStyled = styled.div`
+const WeekPlanWrapper = styled.div`
     overflow: auto;
     scrollbar-width: none;
     z-index: 9999;

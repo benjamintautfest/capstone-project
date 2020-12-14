@@ -18,7 +18,7 @@ export default function ShoppingList({ weekdays }) {
     }, {})
 
     return (
-        <DivStyled>
+        <ShoppingListWrapper>
             <h1>Einkaufsliste</h1>
 
             <ul>
@@ -32,11 +32,11 @@ export default function ShoppingList({ weekdays }) {
                     </li>
                 ))}
             </ul>
-        </DivStyled>
+        </ShoppingListWrapper>
     )
 }
 
-const DivStyled = styled.div`
+const ShoppingListWrapper = styled.div`
     overflow: auto;
     scrollbar-width: none;
     z-index: 9999;
@@ -45,7 +45,7 @@ const DivStyled = styled.div`
     }
 
     h1 {
-        color: maroon;
+        color: var(--red);
     }
 
     ul {

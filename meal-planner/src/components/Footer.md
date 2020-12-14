@@ -1,5 +1,5 @@
 Footer
 
 ```jsx
-<Footer></Footer>
+<Footer />
 ```
