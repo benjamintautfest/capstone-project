@@ -80,7 +80,7 @@ const ListStyled = styled.ul`
     li {
         display: grid;
         place-items: center;
-        background: maroon;
+        background: var(--red);
         margin: 5px;
         color: ivory;
         padding: 0 30px;

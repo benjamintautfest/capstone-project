@@ -14,7 +14,7 @@ export default function MainPage({
     handleShowRecipe,
 }) {
     return (
-        <SectionStyled>
+        <SelectButtonContainer>
             {showRecipe ? (
                 <RecipePage
                     closeRecipe={handleCloseRecipe}
@@ -45,11 +45,11 @@ export default function MainPage({
                         )}
                     </div>
                 ))}
-        </SectionStyled>
+        </SelectButtonContainer>
     )
 }
 
-const SectionStyled = styled.section`
+const SelectButtonContainer = styled.section`
     overflow-y: auto;
     display: flex;
     flex-direction: column;

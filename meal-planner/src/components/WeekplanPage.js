@@ -48,7 +48,7 @@ const DivStyled = styled.div`
     }
 
     h1 {
-        color: maroon;
+        color: var(--red);
     }
 
     h3 {
@@ -58,7 +58,7 @@ const DivStyled = styled.div`
     }
 
     span {
-        color: darkorange;
+        color: var(--orange);
     }
 
     section {
@@ -99,7 +99,7 @@ const DivStyled = styled.div`
         border-radius: 10px;
         margin: 20px;
         padding: 20px;
-        background: maroon;
+        background: var(--red);
     }
 
     summary {

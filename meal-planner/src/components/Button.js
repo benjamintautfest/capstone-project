@@ -27,11 +27,11 @@ const ButtonStyled = styled.button`
     height: 50px;
     border-radius: 50px;
     background: url(${slate});
-    background-color: maroon;
+    background-color: --var(primary-red);
+
     background-size: cover;
     color: white;
     font-size: 0.9em;
-    color: #e5e0e0;
     padding: 0 30px;
     align-items: center;
     outline: 0;
@@ -39,6 +39,7 @@ const ButtonStyled = styled.button`
 
     .day {
         color: orange;
+        color: var(--orange);
         margin-right: auto;
     }
 

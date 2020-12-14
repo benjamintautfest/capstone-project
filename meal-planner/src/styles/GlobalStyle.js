@@ -20,5 +20,8 @@ h1 {
     font-family: 'Sansita Swashed', cursive;
 }
 
-
+:root {
+    --orange: darkorange;
+    --red: maroon;
+}
 `
