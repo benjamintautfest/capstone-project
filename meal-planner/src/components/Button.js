@@ -38,7 +38,6 @@ const ButtonStyled = styled.button`
     cursor: pointer;
 
     .day {
-        color: orange;
         color: var(--orange);
         margin-right: auto;
     }

@@ -1,5 +1,5 @@
 Header:
 
 ```jsx
-<Header>Montag</Header>
+<Header />
 ```

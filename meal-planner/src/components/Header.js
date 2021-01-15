@@ -13,7 +13,6 @@ const HeaderStyled = styled.header`
     position: relative;
     box-shadow: 0 0 10px #965a0f;
     padding-bottom: 30px;
-    //z-index: 0;
 
     h1 {
         color: white;
